@@ -16,22 +16,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   useEffect(() => {
-    // Load external styles and scripts dynamically
-    const interFont = document.createElement("link");
-    interFont.href =
-      "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap";
-    interFont.rel = "stylesheet";
-    document.head.appendChild(interFont);
-
-    const tailwindScript = document.createElement("script");
-    tailwindScript.src = "https://cdn.tailwindcss.com";
-    document.body.appendChild(tailwindScript);
-
     library.add(faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck);
-    return () => {
-      document.head.removeChild(interFont);
-      document.body.removeChild(tailwindScript);
-    };
   }, []);
 
   return (
