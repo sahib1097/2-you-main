@@ -36,20 +36,23 @@ export default function Home() {
 
             {/* Right side navigation */}
             <div className="flex items-center space-x-6">
-              <Link to="/business" className="text-white hover:text-red-200">
+              <Link to="/business" className="text-white font-semibold hover:text-red-200">
                 Business
               </Link>
-              <Link to="/enterprise" className="text-white hover:text-red-200">
+              <Link to="/enterprise" className="text-white font-semibold hover:text-red-200">
                 Enterprise
               </Link>
-              <Link to="/professional" className="text-white hover:text-red-200">
+              <Link to="/professional" className="text-white font-semibold hover:text-red-200">
                 Professional
               </Link>
               
 
               {/* Sign In Button */}
+              <button className="ml-4 bg-red-600 text-white font-semibold hover:text-red-200">
+                Log In
+              </button>
               <button className="ml-4 bg-white text-red-600 px-6 py-2 rounded-full font-medium hover:bg-red-100">
-                Sign In
+                Sign Up
               </button>
             </div>
           </div>
@@ -62,11 +65,11 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 text-white">
               <h1 className="text-5xl font-bold mb-6">
-                The ultimate communication Platform
+                {/*add 0.5 spacing*/}
+                The ultimate (secure) communication Platform
               </h1>
               <p className="text-xl mb-8">
-                Made for enterprises, professionals and individuals.
-                Schedule meetings, verify availability, and chat securely - all in one place.
+                Effortlessly connect with friends and family. Share moments, chat instantly, and stay closer than ever with intuitive features designed for your personal life.
               </p>
               <div className="flex space-x-4">
                 <button className="bg-white text-red-600 px-8 py-3 rounded-full font-medium hover:bg-red-100">
@@ -190,14 +193,14 @@ export default function Home() {
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-black">Choose Your Plan</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div id="price-card-1" className="border rounded-xl p-8">
+          <h2 className="text-4xl font-bold text-center mb-16 text-black">Yep, Its <span className="text-red-600">FREE FOREVER</span></h2>
+          <div className="flex gap-8 justify-center">
+            <div id="price-card-1" className="border-2 border-gray-600 rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-4 text-black">Personal </h3>
               <p className="text-4xl font-bold mb-6 text-black">Free</p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faGem} className="fa-solid text-yellow-500 mr-3 text-xl"></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faGem} className="fa-solid text-blue-500 mr-3 text-xl"></FontAwesomeIcon>
                   Premium In-App Purchases Available
                 </li>
                 <li className="flex items-center text-black">
@@ -214,63 +217,6 @@ export default function Home() {
                 </li>
               </ul>
               <button className="w-full bg-red-600 text-white py-3 rounded-full hover:bg-red-700">Get Started</button>
-            </div>
-
-            <div id="price-card-2" className="border rounded-xl p-8 bg-red-50 border-red-600">
-              <h3 className="text-2xl font-bold mb-4 text-black">Professional</h3>
-              <p className="text-4xl font-bold mb-6 text-black">$34.99<span className="text-gray-500 text-lg">/month or $0.70 per user</span></p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  Up-To 25 Users 
-                </li>
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  Group Meeting
-                </li>
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  HD Call and Video Quality
-                </li>
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  Screen Sharing
-                </li>
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  10 Integrations Including Jira
-                </li>
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  50GB Storage
-                </li>
-              </ul>
-              <button className="w-full bg-red-600 text-white py-3 rounded-full hover:bg-red-700">Upgrade Now</button>
-            </div>
-
-            <div id="price-card-3" className="border rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-4 text-black">Enterprise</h3>
-              <p className="text-1xl font-bold mb-6 text-black">Contact Sales (Don't Worry it's Reasonably Priced We Just Want to Pretend to be Important) 
-              </p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  Single-Sign On 
-                </li>
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  Data Retention
-                </li>
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  AI Integration
-                </li>
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  175GB of Storage
-                </li>
-              </ul>
-              <button className="w-full bg-red-600 text-white py-3 rounded-full hover:bg-red-700">Contact Sales</button>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import type { Route } from "./+types/home";
 import { library} from '@fortawesome/fontawesome-svg-core';
-import { faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem  } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem} from '@fortawesome/free-solid-svg-icons';
 import {faLinkedin, faSquareXTwitter, faSquareFacebook, faAndroid, faApple} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mobilephone from "../Assets/2You Mobile.png";
@@ -38,20 +38,23 @@ export default function Business() {
 
             {/* Right side navigation */}
             <div className="flex items-center space-x-6">
-              <Link to="/business" className="text-white hover:text-red-200">
-                Business
+              <Link to="/" className="text-white font-semibold hover:text-red-200">
+                Personal
               </Link>
-              <Link to="/enterprise" className="text-white hover:text-red-200">
+              <Link to="/enterprise" className="text-white font-semibold hover:text-red-200">
                 Enterprise
               </Link>
-              <Link to="/professional" className="text-white hover:text-red-200">
+              <Link to="/professional" className="text-white font-semibold hover:text-red-200">
                 Professional
               </Link>
               
 
               {/* Sign In Button */}
+              <button className="ml-4 bg-red-600 text-white font-semibold hover:text-red-200">
+                Log In
+              </button>
               <button className="ml-4 bg-white text-red-600 px-6 py-2 rounded-full font-medium hover:bg-red-100">
-                Sign In
+                Sign Up
               </button>
             </div>
           </div>
@@ -64,11 +67,10 @@ export default function Business() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 text-white">
               <h1 className="text-5xl font-bold mb-6">
-                FREE WORKSPACE CHAT FOREVER.
+                Our workspace is your workspace - for free.
               </h1>
               <p className="text-xl mb-8">
-                The ultimate communication platform for professionals and individuals.
-                Schedule meetings, verify availability, and chat securely - all in one place.
+                Streamline team communication and boost productivity. Real-time messaging, file sharing, and colaborative tools designed to keep your business connected and efficient.
               </p>
               <div className="flex space-x-4">
                 <button className="bg-white text-red-600 px-8 py-3 rounded-full font-medium hover:bg-red-100">
@@ -97,28 +99,28 @@ export default function Business() {
       {/* Features Section */}
       <section id="features" className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-black">Powerful Features for Everyone</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-black">Business without Limits</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div id="feature-card-1" className="p-6 rounded-xl shadow-lg">
               <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
                 <FontAwesomeIcon icon={faCalendarCheck} className="text-red-600 text-2xl" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-black">Smart Scheduling</h3>
-              <p className="text-gray-600">Effortlessly coordinate meetings with automatic availability checking and calendar integration.</p>
+              <h3 className="text-xl font-bold mb-3 text-black">Unlimited Users</h3>
+              <p className="text-gray-600">Scale effortlessly with no restrictions on team size, allowing everyone in your organization to collaborate securely in one unified space.</p>
             </div>
             <div id="feature-card-2" className="p-6 rounded-xl shadow-lg">
               <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
                 <FontAwesomeIcon icon={faShieldHalved} className="text-red-600 text-2xl" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-black">End-to-End Encryption</h3>
-              <p className="text-gray-600">Your conversations are always private with military-grade encryption and optional secure backup.</p>
+              <h3 className="text-xl font-bold mb-3 text-black">Unlimited Channels</h3>
+              <p className="text-gray-600">Organize discussions, projects, or departments with as many dedicated channels as needed, ensuring clarity and focus for every workflow.</p>
             </div>
             <div id="feature-card-3" className="p-6 rounded-xl shadow-lg">
               <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
                 <FontAwesomeIcon icon={faUsers} className="text-red-600 text-2xl" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-black">Team Collaboration</h3>
-              <p className="text-gray-600">Perfect for BDMs, brokers, and institutions with specialized tools for professional communication.</p>
+              <h3 className="text-xl font-bold mb-3 text-black">Unlimited Collaboration</h3>
+              <p className="text-gray-600">Enable seamless teamwork with real-time editing, file sharing, and communication tools—all without caps on usage or creativity.</p>
             </div>
           </div>
         </div>
@@ -195,24 +197,28 @@ export default function Business() {
           <h2 className="text-4xl font-bold text-center mb-16 text-black">Choose Your Plan</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div id="price-card-1" className="border rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-4 text-black">Personal </h3>
-              <p className="text-4xl font-bold mb-6 text-black">Free</p>
+              <h3 className="text-2xl font-bold mb-4 text-black">Business </h3>
+              <p className="text-4xl font-bold mb-6 text-black">Free (Lifetime)</p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faGem} className="fa-solid text-yellow-500 mr-3 text-xl"></FontAwesomeIcon>
-                  Premium In-App Purchases Available
+                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
+                  Unlimited Company Users 
                 </li>
                 <li className="flex items-center text-black">
                   <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  Basic chat features
+                  Unlimited Message History
                 </li>
                 <li className="flex items-center text-black">
                   <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                Meeting scheduling
+                  Voice and Video Calling
                 </li>
                 <li className="flex items-center text-black">
                   <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                End-to-end encryption
+                  20GB of Storage Space
+                </li>
+                <li className="flex items-center text-black">
+                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
+                  Export Chats
                 </li>
               </ul>
               <button className="w-full bg-red-600 text-white py-3 rounded-full hover:bg-red-700">Get Started</button>
