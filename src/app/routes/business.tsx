@@ -15,7 +15,7 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
+export default function Business() {
   useEffect(() => {
     library.add(faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem);
   }, []);
@@ -28,10 +28,12 @@ export default function Home() {
           <div className="flex items-center justify-between w-full">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <span className="text-red-600 text-2xl font-bold">2</span>
-              </div>
-              <span className="ml-2 text-2xl font-bold text-white">YOU</span>
+                <Link to="/" className="flex items-center">
+                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                        <span className="text-red-600 text-2xl font-bold">2</span>
+                    </div>
+                    <span className="ml-2 text-2xl font-bold text-white">YOU</span>
+                </Link>
             </div>
 
             {/* Right side navigation */}
@@ -62,10 +64,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 text-white">
               <h1 className="text-5xl font-bold mb-6">
-                The ultimate communication Platform
+                FREE WORKSPACE CHAT FOREVER.
               </h1>
               <p className="text-xl mb-8">
-                Made for enterprises, professionals and individuals.
+                The ultimate communication platform for professionals and individuals.
                 Schedule meetings, verify availability, and chat securely - all in one place.
               </p>
               <div className="flex space-x-4">
