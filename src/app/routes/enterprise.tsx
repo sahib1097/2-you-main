@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import type { Route } from "./+types/home";
 import { library} from '@fortawesome/fontawesome-svg-core';
-import { faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem  } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem, faBolt  } from '@fortawesome/free-solid-svg-icons';
 import {faLinkedin, faSquareXTwitter, faSquareFacebook, faAndroid, faApple} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mobilephone from "../Assets/2You Mobile.png";
 import mobilemsg from "../Assets/2You Messages.png";
+import appstoresvg from "../Assets/appstore.svg"
+import googleplaysvg from "../Assets/googleplay.svg"
 import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
@@ -17,7 +19,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Enterprise() {
   useEffect(() => {
-    library.add(faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem);
+    library.add(faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem, faBolt);
   }, []);
 
   return (
@@ -73,14 +75,30 @@ export default function Enterprise() {
                 In industries where trust and precision define success—from banking and investment firms to insurance and healthcare—secure, streamlined communication is the backbone of closing deals. Empower your sales teams to connect directly with institutional professionals selling your products through cutting-edge encryption, real-time collaboration, and CRM integrations, ensuring every conversation drives revenue—because if your sales matter, shouldn’t your communication be just as strategic?
               </p>
               <div className="flex space-x-4">
-                <button className="bg-red-600 text-white px-8 py-3 rounded-full font-medium hover:bg-red-700">
-                  <FontAwesomeIcon icon={faApple} className="text-white text-2xl mx-1" />
-                  Download 
-                </button>
-                <button className="border-2 border-red text-red-600 px-8 py-3 rounded-full font-medium hover:bg-red-100">
-                <FontAwesomeIcon icon={faAndroid} className="text-red-600 text-2xl mx-2" />
-                  Get it
-                </button>
+              <a
+                href="https://apps.apple.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-4"
+              >
+                <img
+                  src={appstoresvg}
+                  alt="Download on the App Store"
+                  className="w-40 h-auto"
+                />
+              </a>
+              <a
+                href="https://play.google.com/store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2"
+              >
+                <img
+                  src={googleplaysvg}
+                  alt="Get it on Google Play"
+                  className="w-40 h-auto"
+                />
+              </a>
               </div>
             </div>
             <div className="md:w-1/2 mt-12 md:mt-0">
@@ -117,10 +135,10 @@ export default function Enterprise() {
             </div>
             <div id="feature-card-3" className="p-6 rounded-xl bg-white shadow-lg">
               <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-                <FontAwesomeIcon icon={faUsers} className="text-red-600 text-2xl" />
+                <FontAwesomeIcon icon={faBolt} className="text-red-600 text-2xl" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-black">Team Collaboration</h3>
-              <p className="text-black">Perfect for BDMs, brokers, and institutions with specialized tools for professional communication.</p>
+              <h3 className="text-xl font-bold mb-3 text-black">Boosted Efficiency</h3>
+              <p className="text-black">Ditch your company phone and never worry about who is calling and why ever again. Peace of mind is knowing who you’re selling to and when.</p>
             </div>
           </div>
         </div>
@@ -129,216 +147,172 @@ export default function Enterprise() {
       {/* Security Section */}
       <section id="security" className="py-20 bg-red-700">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2">
-              <h2 className="text-4xl font-bold mb-6 text-white">Bank-Grade Security for Your Communications</h2>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faLock} className="text-gray-100 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-white">Unbreakable Security</h3>
-                    <p className="text-gray-100">Our VPN-protected, end-to-end encrypted chat ensures your conversations remain completely private.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faCloud} className="text-gray-100 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-white">Secure Backup</h3>
-                    <p className="text-gray-100">Optional encrypted cloud backup ensures you never lose important conversations.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faHourglassHalf} className="text-gray-100 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-white">Control Your Interactions</h3>
-                    <p className="text-gray-100">Set timed conversations for added peace of mind and manage your digital footprint.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faGlobeAmericas} className="text-gray-100 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-white">Global Reach</h3>
-                    <p className="text-gray-100">Our IP-based language localization allows you to connect with people worldwide, effortlessly adapting to different languages.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faEyeSlash} className="text-gray-100 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-white">Anonymous Communication</h3>
-                    <p className="text-gray-100">Chat anonymously and express yourself freely without revealing your identity.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faPhoneVolume} className="text-gray-100 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-white">Crystal-Clear Calls</h3>
-                    <p className="text-gray-100">Enjoy stable and high-quality video calls with your friends and family.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faShareNodes} className="text-gray-100 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-white">Community Integrations</h3>
-                    <p className="text-gray-100">Connect directly with your favorite online communities – Twitch, YouTube, X, Reddit, and more – all within the 2You ecosystem.</p>
-                  </div>
+          <h2 className="text-4xl font-bold mb-12 text-white text-center">Our Integrations</h2>
+          
+          <div className="mt-30 flex flex-wrap justify-center gap-12">
+            {[
+              { name: 'Zoho', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/ZOHO_logo_2023.svg/512px-ZOHO_logo_2023.svg.png', colorClass: 'btn-back-blue' },
+              { name: 'Salesforce', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg', colorClass: 'btn-back-pink' },
+              { name: 'Trello', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Trello-logo-blue.svg', colorClass: 'btn-back-orange' },
+              { name: 'HubSpot', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/HubSpot_Logo.svg/106px-HubSpot_Logo.svg.png?20190301002710', colorClass: 'btn-back-yellow' },
+              { name: 'Google Meet', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/512px-Google_Meet_icon_%282020%29.svg.png?20221213135236', colorClass: 'btn-back-red' },
+            ].map((integration, index) => (
+              <div key={index} className="block-container w-40 h-20">
+                <div className={`btn-back rounded-xl ${integration.colorClass}`} />
+                <div className="btn-front rounded-xl flex flex-col justify-center items-center text-center px-2">
+                  <img 
+                    src={integration.imageUrl}
+                    alt={integration.name}
+                    className="w-10 h-10 object-contain mb-1"
+                  />
+                  <p className='text-sm font-semibold text-white'>{integration.name}</p>
                 </div>
               </div>
-            </div>
-            <div className="md:w-1/2 mt-12 md:mt-0">
-              <img className="rounded-xl mx-5" src={mobilemsg} alt="encrypted chat" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
+
 
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-red-600">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Choose Your Plan</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div id="price-card-1" className="border rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-4 text-white">Business </h3>
+          <div className="flex flex-col md:flex-row justify-center items-start gap-12">
+
+            <div id="price-card-1" className="w-full max-w-md border rounded-xl p-8">
+              <h3 className="text-2xl font-bold mb-4 text-white">Enterprise </h3>
               <p className="text-4xl font-bold mb-6 text-white">Free (Lifetime)</p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faCheck} className="text-green-500 mr-3 text-xl" />
                   Unlimited Company Users
                 </li>
                 <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faCheck} className="text-green-500 mr-3 text-xl" />
                   Unlimited Message History
                 </li>
                 <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faCheck} className="text-green-500 mr-3 text-xl" />
                   Voice and Video Calling
                 </li>
                 <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faCheck} className="text-green-500 mr-3 text-xl" />
                   20GB of Storage Space
                 </li>
                 <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faCheck} className="text-green-500 mr-3 text-xl" />
                   Export Chats
                 </li>
               </ul>
               <button className="w-full font-bold bg-white text-red-600 py-3 rounded-full hover:bg-red-100">Get Started</button>
             </div>
 
-            <div id="price-card-2" className="border rounded-xl p-8 bg-red-700 border-white">
-              <h3 className="text-2xl font-bold mb-4 text-white">Professional</h3>
-              <p className="text-4xl font-bold mb-6 text-white">$34.99<span className="text-gray-100 text-lg">/month or $0.70/user</span></p>
+            <div id="price-card-2" className="w-full max-w-md border rounded-xl p-8">
+              <h3 className="text-2xl font-bold mb-4 text-white">Even More Free</h3>
+              <p className="text-3xl font-bold mb-6 text-white">
+                Contact Sales <span className="text-gray-100 text-lg">(Don't Worry it's Free)</span>
+              </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  Up-To 25 Users 
-                </li>
-                <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  Group Meeting
-                </li>
-                <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  HD Call and Video Quality
-                </li>
-                <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  Screen Sharing
-                </li>
-                <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  10 Integrations Including Jira
-                </li>
-                <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  50GB Storage
-                </li>
-              </ul>
-              <button className="w-full font-bold bg-white text-red-600 py-3 rounded-full hover:bg-red-100">Upgrade Now</button>
-            </div>
-
-            <div id="price-card-3" className="border rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-4 text-white">Enterprise</h3>
-              <p className="text-3xl font-bold mb-6 text-white">Contact Sales <span className="text-gray-100 text-lg">(Don't Worry it's Free) </span></p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faCheck} className="text-green-500 mr-3 text-xl" />
                   Single-Sign On 
                 </li>
                 <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faCheck} className="text-green-500 mr-3 text-xl" />
                   Data Retention
                 </li>
                 <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faCheck} className="text-green-500 mr-3 text-xl" />
                   AI Integration
                 </li>
                 <li className="flex items-center font-semibold text-white">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faCheck} className="text-green-500 mr-3 text-xl" />
                   175GB of Storage
                 </li>
               </ul>
-              <button className="w-full font-bold bg-white text-red-600 py-3 rounded-full hover:bg-red-100">Contact Sales</button>
+              <button className="w-full font-bold bg-white text-red-600 py-3 rounded-full hover:bg-red-100">Get Started</button>
             </div>
+
           </div>
         </div>
       </section>
 
-
       {/* Footer */}
-      <footer id="footer" className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center mb-6">
-                <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xl font-bold">2</span>
-                </div>
-                <span className="ml-2 text-xl font-bold">YOU</span>
+      <footer id="footer" className="bg-gray-900 text-white w-full">
+      {/* Main footer */}
+      <div className="w-full px-8 py-16 md:py-24 min-h-[75vh] flex flex-col justify-between">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-12">
+          {/* Logo and Description */}
+          <div>
+            <div className="flex items-center mb-6">
+              <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
+                <span className="text-white text-2xl font-bold">2</span>
               </div>
-              <p className="text-gray-400">Secure communication and scheduling for everyone.</p>
+              <span className="ml-3 text-2xl font-bold">YOU</span>
             </div>
-            <div>
-              <h4 className="text-lg font-bold mb-4">Product</h4>
-              <ul className="space-y-2">
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">Features</span></li>
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">Security</span></li>
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">Pricing</span></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-4">Company</h4>
-              <ul className="space-y-2">
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">About</span></li>
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">Contact</span></li>
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">Careers</span></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-4">Support</h4>
-              <ul className="space-y-2">
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">Help Center</span></li>
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">Feedback</span></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-4">Social</h4>
-              <ul className="space-y-2">
-                <span>
-                  <button>
-                    <FontAwesomeIcon icon={faLinkedin} className="fa-solid mr-3 text-xl"></FontAwesomeIcon>
-                  </button>
-                  <button>
-                  <FontAwesomeIcon icon={faSquareXTwitter} className="fa-solid mr-3 text-xl"></FontAwesomeIcon>
-                  </button>
-                  <button>
-                  <FontAwesomeIcon icon={faSquareFacebook} className="fa-solid mr-3 text-xl"></FontAwesomeIcon>
-                  </button>
-                </span>
-              </ul>
+            <p className="text-gray-400 text-sm max-w-xs">
+              Secure communication and scheduling for everyone.
+            </p>
+          </div>
+
+          {/* Product */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Product</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="text-gray-400 hover:text-white cursor-pointer">Features</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">Privacy</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">Security</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">Pricing</li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="text-gray-400 hover:text-white cursor-pointer">About</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">Contact</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">Careers</li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Support</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="text-gray-400 hover:text-white cursor-pointer">Help Center</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">Feedback</li>
+            </ul>
+          </div>
+
+          {/* Social */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Social</h4>
+            <div className="flex space-x-4">
+              <button>
+                <FontAwesomeIcon icon={faLinkedin} className="text-xl text-gray-400 hover:text-white" />
+              </button>
+              <button>
+                <FontAwesomeIcon icon={faSquareXTwitter} className="text-xl text-gray-400 hover:text-white" />
+              </button>
+              <button>
+                <FontAwesomeIcon icon={faSquareFacebook} className="text-xl text-gray-400 hover:text-white" />
+              </button>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+
+      {/* Legal & copyright bar */}
+      <div className="border-t border-gray-700 text-sm text-gray-400 py-4 px-8 flex flex-col md:flex-row justify-between items-center">
+        <p>&copy; {new Date().getFullYear()} 2YOU. All rights reserved.</p>
+        <div className="flex space-x-6 mt-2 md:mt-0">
+          <span className="hover:text-white cursor-pointer">Privacy Policy</span>
+          <span className="hover:text-white cursor-pointer">Terms of Service</span>
+        </div>
+      </div>
+    </footer>
     </div>
   );
 }

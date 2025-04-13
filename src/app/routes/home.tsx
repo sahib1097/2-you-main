@@ -2,10 +2,12 @@ import { useEffect } from "react";
 import type { Route } from "./+types/home";
 import { library} from '@fortawesome/fontawesome-svg-core';
 import { faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem  } from '@fortawesome/free-solid-svg-icons';
-import {faLinkedin, faSquareXTwitter, faSquareFacebook, faAndroid, faApple} from '@fortawesome/free-brands-svg-icons';
+import {faLinkedin, faSquareXTwitter, faSquareFacebook} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mobilephone from "../Assets/2You Mobile.png";
 import mobilemsg from "../Assets/2You Messages.png";
+import appstoresvg from "../Assets/appstore.svg"
+import googleplaysvg from "../Assets/googleplay.svg"
 import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
@@ -46,7 +48,6 @@ export default function Home() {
                 Professional
               </Link>
               
-
               {/* Sign In Button */}
               <button className="ml-4 bg-red-600 text-white font-semibold hover:text-red-200">
                 Log In
@@ -72,14 +73,30 @@ export default function Home() {
                 Effortlessly connect with friends and family. Share moments, chat instantly, and stay closer than ever with intuitive features designed for your personal life.
               </p>
               <div className="flex space-x-4">
-                <button className="bg-white text-red-600 px-8 py-3 rounded-full font-medium hover:bg-red-100">
-                  <FontAwesomeIcon icon={faApple} className="text-red-600 text-2xl mx-1" />
-                  Download 
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-red-700">
-                <FontAwesomeIcon icon={faAndroid} className="text-white text-2xl mx-2" />
-                  Get it
-                </button>
+              <a
+                href="https://apps.apple.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-4"
+              >
+                <img
+                  src={appstoresvg}
+                  alt="Download on the App Store"
+                  className="w-40 h-auto"
+                />
+              </a>
+              <a
+                href="https://play.google.com/store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2"
+              >
+                <img
+                  src={googleplaysvg}
+                  alt="Get it on Google Play"
+                  className="w-40 h-auto"
+                />
+              </a>
               </div>
             </div>
             <div className="md:w-1/2 mt-12 md:mt-0">
@@ -130,61 +147,8 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2">
-              <h2 className="text-4xl font-bold mb-6 text-black">Bank-Grade Security for Your Communications</h2>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faLock} className="text-red-600 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-black">Unbreakable Security</h3>
-                    <p className="text-gray-600">Our VPN-protected, end-to-end encrypted chat ensures your conversations remain completely private.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faCloud} className="text-red-600 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-black">Secure Backup</h3>
-                    <p className="text-gray-600">Optional encrypted cloud backup ensures you never lose important conversations.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faHourglassHalf} className="text-red-600 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-black">Control Your Interactions</h3>
-                    <p className="text-gray-600">Set timed conversations for added peace of mind and manage your digital footprint.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faGlobeAmericas} className="text-red-600 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-black">Global Reach</h3>
-                    <p className="text-gray-600">Our IP-based language localization allows you to connect with people worldwide, effortlessly adapting to different languages.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faEyeSlash} className="text-red-600 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-black">Anonymous Communication</h3>
-                    <p className="text-gray-600">Chat anonymously and express yourself freely without revealing your identity.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faPhoneVolume} className="text-red-600 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-black">Crystal-Clear Calls</h3>
-                    <p className="text-gray-600">Enjoy stable and high-quality video calls with your friends and family.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <FontAwesomeIcon icon={faShareNodes} className="text-red-600 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-black">Community Integrations</h3>
-                    <p className="text-gray-600">Connect directly with your favorite online communities – Twitch, YouTube, X, Reddit, and more – all within the 2You ecosystem.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="md:w-1/2 mt-12 md:mt-0">
-              <img className="rounded-xl mx-5" src={mobilemsg} alt="encrypted chat" />
+              <h2 className="text-4xl font-bold mb-6 text-black">Demos</h2>
+              
             </div>
           </div>
         </div>
@@ -199,21 +163,17 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-4 text-black">Personal </h3>
               <p className="text-4xl font-bold mb-6 text-black">Free</p>
               <ul className="space-y-4 mb-8">
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faGem} className="fa-solid text-blue-500 mr-3 text-xl"></FontAwesomeIcon>
-                  Premium In-App Purchases Available
+                <li className="flex items-center font-semibold text-black">
+                <span className="mr-3 text-xl">💎</span>Premium In-App Purchases Available
                 </li>
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                  Basic chat features
+                <li className="flex items-center font-semibold text-black">
+                <span className="mr-3 text-xl">✅</span>Basic chat features
                 </li>
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                Meeting scheduling
+                <li className="flex items-center font-semibold text-black">
+                <span className="mr-3 text-xl">✅</span>Meeting scheduling
                 </li>
-                <li className="flex items-center text-black">
-                  <FontAwesomeIcon icon={faCheck} className="fa-solid text-green-500 mr-3 text-xl"></FontAwesomeIcon>
-                End-to-end encryption
+                <li className="flex items-center font-semibold text-black">
+                <span className="mr-3 text-xl">✅</span>End-to-end encryption
                 </li>
               </ul>
               <button className="w-full bg-red-600 text-white py-3 rounded-full hover:bg-red-700">Get Started</button>
@@ -224,53 +184,80 @@ export default function Home() {
 
 
       {/* Footer */}
-      <footer id="footer" className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center mb-6">
-                <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xl font-bold">2</span>
-                </div>
-                <span className="ml-2 text-xl font-bold">YOU</span>
+      <footer id="footer" className="bg-gray-900 text-white w-full">
+      {/* Main footer */}
+      <div className="w-full px-8 py-16 md:py-24 min-h-[75vh] flex flex-col justify-between">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-12">
+          {/* Logo and Description */}
+          <div>
+            <div className="flex items-center mb-6">
+              <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
+                <span className="text-white text-2xl font-bold">2</span>
               </div>
-              <p className="text-gray-400">Secure communication and scheduling for everyone.</p>
+              <span className="ml-3 text-2xl font-bold">YOU</span>
             </div>
-            <div>
-              <h4 className="text-lg font-bold mb-4">Product</h4>
-              <ul className="space-y-2">
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">Features</span></li>
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">Security</span></li>
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">Pricing</span></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-4">Company</h4>
-              <ul className="space-y-2">
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">About</span></li>
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">Contact</span></li>
-                <li><span className="text-gray-400 hover:text-white cursor-pointer">Careers</span></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-4">Social</h4>
-              <ul className="space-y-2">
-                <span>
-                  <button>
-                    <FontAwesomeIcon icon={faLinkedin} className="fa-solid mr-3 text-xl"></FontAwesomeIcon>
-                  </button>
-                  <button>
-                  <FontAwesomeIcon icon={faSquareXTwitter} className="fa-solid mr-3 text-xl"></FontAwesomeIcon>
-                  </button>
-                  <button>
-                  <FontAwesomeIcon icon={faSquareFacebook} className="fa-solid mr-3 text-xl"></FontAwesomeIcon>
-                  </button>
-                </span>
-              </ul>
+            <p className="text-gray-400 text-sm max-w-xs">
+              Secure communication and scheduling for everyone.
+            </p>
+          </div>
+
+          {/* Product */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Product</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="text-gray-400 hover:text-white cursor-pointer">Features</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">Privacy</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">Security</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">Pricing</li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="text-gray-400 hover:text-white cursor-pointer">About</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">Contact</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">Careers</li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Support</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="text-gray-400 hover:text-white cursor-pointer">Help Center</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">Feedback</li>
+            </ul>
+          </div>
+
+          {/* Social */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Social</h4>
+            <div className="flex space-x-4">
+              <button>
+                <FontAwesomeIcon icon={faLinkedin} className="text-xl text-gray-400 hover:text-white" />
+              </button>
+              <button>
+                <FontAwesomeIcon icon={faSquareXTwitter} className="text-xl text-gray-400 hover:text-white" />
+              </button>
+              <button>
+                <FontAwesomeIcon icon={faSquareFacebook} className="text-xl text-gray-400 hover:text-white" />
+              </button>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+
+      {/* Legal & copyright bar */}
+      <div className="border-t border-gray-700 text-sm text-gray-400 py-4 px-8 flex flex-col md:flex-row justify-between items-center">
+        <p>&copy; {new Date().getFullYear()} 2YOU. All rights reserved.</p>
+        <div className="flex space-x-6 mt-2 md:mt-0">
+          <span className="hover:text-white cursor-pointer">Privacy Policy</span>
+          <span className="hover:text-white cursor-pointer">Terms of Service</span>
+        </div>
+      </div>
+    </footer>
     </div>
   );
 }
