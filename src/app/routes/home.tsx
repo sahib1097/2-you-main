@@ -5,11 +5,10 @@ import { faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faH
 import {faLinkedin, faSquareXTwitter, faSquareFacebook} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mobilephone from "../Assets/2You Mobile.png";
-import mobilemsg from "../Assets/2You Messages.png";
 import appstoresvg from "../Assets/appstore.svg"
 import googleplaysvg from "../Assets/googleplay.svg"
 import { Link } from "react-router";
-
+import Footer from "../components/Footer";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "2YOU" },
@@ -184,80 +183,7 @@ export default function Home() {
 
 
       {/* Footer */}
-      <footer id="footer" className="bg-gray-900 text-white w-full">
-      {/* Main footer */}
-      <div className="w-full px-8 py-16 md:py-24 min-h-[75vh] flex flex-col justify-between">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-12">
-          {/* Logo and Description */}
-          <div>
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
-                <span className="text-white text-2xl font-bold">2</span>
-              </div>
-              <span className="ml-3 text-2xl font-bold">YOU</span>
-            </div>
-            <p className="text-gray-400 text-sm max-w-xs">
-              Secure communication and scheduling for everyone.
-            </p>
-          </div>
-
-          {/* Product */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Product</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="text-gray-400 hover:text-white cursor-pointer">Features</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Privacy</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Security</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Pricing</li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="text-gray-400 hover:text-white cursor-pointer">About</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Contact</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Careers</li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Support</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="text-gray-400 hover:text-white cursor-pointer">Help Center</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Feedback</li>
-            </ul>
-          </div>
-
-          {/* Social */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Social</h4>
-            <div className="flex space-x-4">
-              <button>
-                <FontAwesomeIcon icon={faLinkedin} className="text-xl text-gray-400 hover:text-white" />
-              </button>
-              <button>
-                <FontAwesomeIcon icon={faSquareXTwitter} className="text-xl text-gray-400 hover:text-white" />
-              </button>
-              <button>
-                <FontAwesomeIcon icon={faSquareFacebook} className="text-xl text-gray-400 hover:text-white" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Legal & copyright bar */}
-      <div className="border-t border-gray-700 text-sm text-gray-400 py-4 px-8 flex flex-col md:flex-row justify-between items-center">
-        <p>&copy; {new Date().getFullYear()} 2YOU. All rights reserved.</p>
-        <div className="flex space-x-6 mt-2 md:mt-0">
-          <span className="hover:text-white cursor-pointer">Privacy Policy</span>
-          <span className="hover:text-white cursor-pointer">Terms of Service</span>
-        </div>
-      </div>
-    </footer>
+      <Footer/>
     </div>
   );
 }

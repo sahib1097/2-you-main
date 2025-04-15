@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import type { Route } from "./+types/home";
 import { library} from '@fortawesome/fontawesome-svg-core';
-import { faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem, faLink, faBolt, faCalendar, faBell, faPlug, faGears  } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem, faLink, faBolt, faCalendar, faBell, faPlug, faGears, faCar, faCoins, faHouseChimneyCrack, faSuitcaseMedical, faBuildingColumns, faGavel  } from '@fortawesome/free-solid-svg-icons';
 import {faLinkedin, faSquareXTwitter, faSquareFacebook} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mobilephone from "../Assets/2You Mobile.png";
@@ -9,6 +9,7 @@ import mobilemsg from "../Assets/2You Messages.png";
 import appstoresvg from "../Assets/appstore.svg"
 import googleplaysvg from "../Assets/googleplay.svg"
 import { Link } from "react-router";
+import Footer from "../components/Footer";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -68,7 +69,7 @@ export default function Professional() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 text-black">
               <h1 className="text-5xl font-bold mb-6">
-                An upper edge for your sales team to cook. 
+                An upper edge for your sales team to cook 🔥 
               </h1>
               <p className="text-xl mb-8">
                 Professional and Enterprise connect seamlessly together to provide a unique experience that allows your sales team to communicate effectively with the businesses that keep your company in motion.
@@ -146,26 +147,26 @@ export default function Professional() {
       {/* Industries Section */}
       <section id="Industries" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2">
-              <h2 className="text-4xl font-bold mb-6 text-black">Industries we service</h2>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  {/*stuff*/}
+          <h2 className="text-4xl font-bold mb-12 text-black text-center">Industries we service</h2>
+
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl">
+              {[
+                { icon: faCar, label: "Auto", color: "text-gray-600" },
+                { icon: faCoins, label: "Finance", color: "text-yellow-400" },
+                { icon: faHouseChimneyCrack, label: "Insurance", color: "text-indigo-500" },
+                { icon: faSuitcaseMedical, label: "Healthcare", color: "text-red-600" },
+                { icon: faBuildingColumns, label: "Government", color: "text-sky-500" },
+                { icon: faGavel, label: "Legal", color: "text-yellow-600" },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white rounded-xl shadow-md w-[260px] h-[200px] flex flex-col items-center justify-center text-center hover:shadow-xl transition"
+                >
+                  <FontAwesomeIcon icon={item.icon} className={`${item.color} text-4xl mb-3`} />
+                  <h3 className="text-xl font-semibold text-black">{item.label}</h3>
                 </div>
-                <div className="flex items-start">
-                  {/*stuff*/}
-                </div>
-                <div className="flex items-start">
-                  {/*stuff*/}
-                </div>
-                <div className="flex items-start">
-                  {/*stuff*/}
-                </div>
-              </div>
-            </div>
-            <div className="md:w-1/2 mt-12 md:mt-0">
-              {/*img*/}
+              ))}
             </div>
           </div>
         </div>
@@ -245,81 +246,7 @@ export default function Professional() {
 
 
       {/* Footer */}
-      <footer id="footer" className="bg-gray-900 text-white w-full">
-      {/* Main footer */}
-      <div className="w-full px-8 py-16 md:py-24 min-h-[75vh] flex flex-col justify-between">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-12">
-          {/* Logo and Description */}
-          <div>
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
-                <span className="text-white text-2xl font-bold">2</span>
-              </div>
-              <span className="ml-3 text-2xl font-bold">YOU</span>
-            </div>
-            <p className="text-gray-400 text-sm max-w-xs">
-              Secure communication and scheduling for everyone.
-            </p>
-          </div>
-
-          {/* Product */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Product</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="text-gray-400 hover:text-white cursor-pointer">Features</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Privacy</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Security</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Pricing</li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="text-gray-400 hover:text-white cursor-pointer">About</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Contact</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Careers</li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Support</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="text-gray-400 hover:text-white cursor-pointer">Help Center</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Feedback</li>
-            </ul>
-          </div>
-
-          {/* Social */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Social</h4>
-            <div className="flex space-x-4">
-              <button>
-                <FontAwesomeIcon icon={faLinkedin} className="text-xl text-gray-400 hover:text-white" />
-              </button>
-              <button>
-                <FontAwesomeIcon icon={faSquareXTwitter} className="text-xl text-gray-400 hover:text-white" />
-              </button>
-              <button>
-                <FontAwesomeIcon icon={faSquareFacebook} className="text-xl text-gray-400 hover:text-white" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Legal & copyright bar */}
-      <div className="border-t border-gray-700 text-sm text-gray-400 py-4 px-8 flex flex-col md:flex-row justify-between items-center">
-        <p>&copy; {new Date().getFullYear()} 2YOU. All rights reserved.</p>
-        <div className="flex space-x-6 mt-2 md:mt-0">
-          <span className="hover:text-white cursor-pointer">Privacy Policy</span>
-          <span className="hover:text-white cursor-pointer">Terms of Service</span>
-        </div>
-      </div>
-    </footer>
-
+      <Footer/>
     </div>
   );
 }
