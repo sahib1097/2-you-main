@@ -1,14 +1,12 @@
-import { useEffect } from "react";
 import type { Route } from "./+types/home";
-import { library} from '@fortawesome/fontawesome-svg-core';
-import { faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem  } from '@fortawesome/free-solid-svg-icons';
-import {faLinkedin, faSquareXTwitter, faSquareFacebook} from '@fortawesome/free-brands-svg-icons';
+import { faCalendarCheck, faShieldHalved, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mobilephone from "../Assets/2You Mobile.png";
 import appstoresvg from "../Assets/appstore.svg"
 import googleplaysvg from "../Assets/googleplay.svg"
 import { Link } from "react-router";
 import Footer from "../components/Footer";
+
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "2YOU" },
@@ -17,9 +15,6 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  useEffect(() => {
-    library.add(faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem);
-  }, []);
 
   return (
     <div>
@@ -72,24 +67,14 @@ export default function Home() {
                 Effortlessly connect with friends and family. Share moments, chat instantly, and stay closer than ever with intuitive features designed for your personal life.
               </p>
               <div className="flex space-x-4">
-              <a
-                href="https://apps.apple.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-4"
-              >
+              <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer" className="ml-4">
                 <img
                   src={appstoresvg}
                   alt="Download on the App Store"
                   className="w-40 h-auto"
                 />
               </a>
-              <a
-                href="https://play.google.com/store"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-2"
-              >
+              <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="ml-2">
                 <img
                   src={googleplaysvg}
                   alt="Get it on Google Play"

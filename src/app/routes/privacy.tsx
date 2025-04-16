@@ -1,0 +1,208 @@
+import type { Route } from "./+types/home";
+import {  faUsers, faBolt, faCalendar, faBell, faPlug, faGears, faCar, faCoins, faHouseChimneyCrack, faSuitcaseMedical, faBuildingColumns, faGavel, faCheck  } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import mobilephone from "../Assets/2You Mobile.png";
+import mobilemsg from "../Assets/2You Messages.png";
+import appstoresvg from "../Assets/appstore.svg"
+import googleplaysvg from "../Assets/googleplay.svg"
+import { Link } from "react-router";
+import Footer from "../components/Footer";
+import lock from "../Assets/lockartwork2.svg"
+
+export function meta({}: Route.MetaArgs) {
+    return [
+      { title: "2YOU Privacy" },
+      { name: "description", content: "Welcome to 2YOU!" },
+    ];
+  }
+
+export default function Privacy() {
+    return(
+        <div id="main-container" className="min-h-screen bg-white">
+            {/* Header */}
+            <header id="header" className="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+                <div className="container mx-auto px-4 py-4">
+                    <nav className="flex items-center justify-between">
+                        <div className="flex items-center">
+                            <span  className="text-3xl font-bold text-red-600 cursor-pointer">2YOU</span>
+                        </div>
+                        <div className="hidden md:flex space-x-8">
+                            <a href="#features" className="text-gray-600 hover:text-red-600">Features</a>
+                            <a href="#security" className="text-gray-600 hover:text-red-600">Security</a>
+                            <a href="#privacy" className="text-gray-600 hover:text-red-600">Privacy</a>
+                            <a href="#download" className="text-gray-600 hover:text-red-600">Download</a>
+                        </div>
+                        <div>
+                            <a href="#download" className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700">
+                                Get 2YOU
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            {/* Hero Section */}
+            <section id="hero" className="pt-24 h-[800px]">
+                <div className="container mx-auto px-4 py-16">
+                    <div className="flex flex-col md:flex-row items-center">
+                        <div className="md:w-1/2 mb-8 md:mb-0">
+                            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                                Chat with Complete Privacy and Freedom
+                            </h1>
+                            <p className="text-xl text-gray-600 mb-8">
+                                Experience next-level privacy with VPN-enabled chats, anonymous messaging, and unique security features that put you in control.
+                            </p>
+                            <div className="flex space-x-4">
+                            <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer" className="ml-4">
+                                <img
+                                src={appstoresvg}
+                                alt="Download on the App Store"
+                                className="w-40 h-auto"
+                                />
+                            </a>
+                            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="ml-2">
+                                <img
+                                src={googleplaysvg}
+                                alt="Get it on Google Play"
+                                className="w-40 h-auto"
+                                />
+                            </a>
+                            </div>
+                        </div>
+                        <div className="md:w-1/2 my-auto">
+                            <img className="w-full h-auto" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2c773fc097-680a71ff3be64de7a52d.png" alt="illustration of people chatting with floating message bubbles and privacy symbols, handcrafted style, red and white color scheme" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Features Section */}
+            <section id="features" className="py-20 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-4xl text-black font-bold text-center mb-16">Powerful Privacy Features</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* VPN-Enabled Chat */}
+                        <div id="feature-vpn" className="bg-white p-8 rounded-2xl shadow-lg">
+                            <div className="text-red-600 text-3xl mb-4">
+                                <i className="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h3 className="text-2xl text-black font-bold mb-4">VPN-Enabled Chat</h3>
+                            <p className="text-gray-600">Secure your conversations with built-in VPN technology, ensuring your messages stay private and protected.</p>
+                        </div>
+
+                        {/* Anonymous Chat */}
+                        <div id="feature-anonymous" className="bg-white p-8 rounded-2xl shadow-lg">
+                            <div className="text-red-600 text-3xl mb-4">
+                                <i className="fa-solid fa-user-secret"></i>
+                            </div>
+                            <h3 className="text-2xl text-black font-bold mb-4">Anonymous Chat</h3>
+                            <p className="text-gray-600">Chat without revealing your identity. Perfect for private conversations and maintaining anonymity.</p>
+                        </div>
+
+                        {/* Disappearing Messages */}
+                        <div id="feature-disappearing" className="bg-white p-8 rounded-2xl shadow-lg">
+                            <div className="text-red-600 text-3xl mb-4">
+                                <i className="fa-solid fa-clock"></i>
+                            </div>
+                            <h3 className="text-2xl text-black font-bold mb-4">Disappearing Messages</h3>
+                            <p className="text-gray-600">Set messages to automatically disappear after a specified time, leaving no trace behind.</p>
+                        </div>
+
+                        {/* Timed Messages */}
+                        <div id="feature-timed" className="bg-white p-8 rounded-2xl shadow-lg">
+                            <div className="text-red-600 text-3xl mb-4">
+                                <i className="fa-solid fa-hourglass"></i>
+                            </div>
+                            <h3 className="text-2xl text-black font-bold mb-4">Timed Messages</h3>
+                            <p className="text-gray-600">Schedule your messages to be sent at the perfect moment, maintaining control over your communication.</p>
+                        </div>
+
+                        {/* Archive Lock */}
+                        <div id="feature-archive" className="bg-white p-8 rounded-2xl shadow-lg">
+                            <div className="text-red-600 text-3xl mb-4">
+                                <i className="fa-solid fa-lock"></i>
+                            </div>
+                            <h3 className="text-2xl text-black font-bold mb-4">Archive Lock</h3>
+                            <p className="text-gray-600">Keep your archived messages secure with an additional layer of protection.</p>
+                        </div>
+
+                        {/* Secondary Password */}
+                        <div id="feature-password" className="bg-white p-8 rounded-2xl shadow-lg">
+                            <div className="text-red-600 text-3xl mb-4">
+                                <i className="fa-solid fa-key"></i>
+                            </div>
+                            <h3 className="text-2xl text-black font-bold mb-4">Secondary Password</h3>
+                            <p className="text-gray-600">Use a special password to make deleted and archived messages appear blank, adding an extra layer of privacy.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Security Highlight Section */}
+            <section id="security" className="py-20">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col md:flex-row items-center">
+                        <div className="md:w-1/2 mb-8 md:mb-0">
+                            <img className="w-full h-auto" src={lock} alt="illustration of a secure messaging interface with lock symbols and privacy shields, handcrafted style" />
+                        </div>
+                        <div className="md:w-1/2 md:pl-12">
+                            <h2 className="text-4xl text-black font-bold mb-6">Your Privacy is Our Priority</h2>
+                            <div className="space-y-6">
+                                <div className="flex items-start">
+                                    <FontAwesomeIcon icon={faCheck} className="text-red-600 text-2xl"/>
+                                    <div className="ml-4">
+                                        <h3 className="text-xl text-black font-bold">End-to-End Encryption</h3>
+                                        <p className="text-gray-600">Your messages are encrypted from the moment they're sent until they're received.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start">
+                                    <FontAwesomeIcon icon={faCheck} className="text-red-600 text-2xl"/>
+                                    <div className="ml-4">
+                                        <h3 className="text-xl text-black font-bold">No Data Storage</h3>
+                                        <p className="text-gray-600">We don't store your messages or personal information on our servers.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start">
+                                    <FontAwesomeIcon icon={faCheck} className="text-red-600 text-2xl"/>
+                                    <div className="ml-4">
+                                        <h3 className="text-xl text-black font-bold">Advanced Security Features</h3>
+                                        <p className="text-gray-600">Multiple layers of security to keep your conversations private and secure.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Download Section */}
+            <section id="download" className="py-20 bg-red-600">
+                <div className="container mx-auto px-4 text-center">
+                    <h2 className="text-4xl font-bold text-white mb-8">Download 2YOU Today</h2>
+                    <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+                        Join millions of users who trust 2YOU for their private conversations. Available on all major platforms.
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-6">
+                    <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer" className="ml-4">
+                                <img
+                                src={appstoresvg}
+                                alt="Download on the App Store"
+                                className="w-40 h-auto"
+                                />
+                            </a>
+                            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="ml-2">
+                                <img
+                                src={googleplaysvg}
+                                alt="Get it on Google Play"
+                                className="w-40 h-auto"
+                                />
+                            </a>
+                    </div>
+                </div>
+            </section>
+
+            {/* Footer */}
+            <Footer/>
+        </div>
+    );
+}

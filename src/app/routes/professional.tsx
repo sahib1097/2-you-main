@@ -1,8 +1,5 @@
-import { useEffect } from "react";
 import type { Route } from "./+types/home";
-import { library} from '@fortawesome/fontawesome-svg-core';
-import { faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem, faLink, faBolt, faCalendar, faBell, faPlug, faGears, faCar, faCoins, faHouseChimneyCrack, faSuitcaseMedical, faBuildingColumns, faGavel  } from '@fortawesome/free-solid-svg-icons';
-import {faLinkedin, faSquareXTwitter, faSquareFacebook} from '@fortawesome/free-brands-svg-icons';
+import {  faUsers, faBolt, faCalendar, faBell, faPlug, faGears, faCar, faCoins, faHouseChimneyCrack, faSuitcaseMedical, faBuildingColumns, faGavel  } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mobilephone from "../Assets/2You Mobile.png";
 import mobilemsg from "../Assets/2You Messages.png";
@@ -13,15 +10,12 @@ import Footer from "../components/Footer";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "2YOU" },
+    { title: "2YOU Professional" },
     { name: "description", content: "Welcome to 2YOU!" },
   ];
 }
 
 export default function Professional() {
-  useEffect(() => {
-    library.add(faCalendarCheck, faShieldHalved, faUsers, faLock, faCloud, faCheck, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faGem, faLink, faBolt, faPlug);
-  }, []);
 
   return (
     <div>
