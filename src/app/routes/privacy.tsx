@@ -1,13 +1,12 @@
 import type { Route } from "./+types/home";
-import {  faUsers, faBolt, faCalendar, faBell, faPlug, faGears, faCar, faCoins, faHouseChimneyCrack, faSuitcaseMedical, faBuildingColumns, faGavel, faCheck  } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faShieldHalved, faUserSecret, faClock, faHourglass, faLock, faKey  } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import mobilephone from "../Assets/2You Mobile.png";
-import mobilemsg from "../Assets/2You Messages.png";
 import appstoresvg from "../Assets/appstore.svg"
 import googleplaysvg from "../Assets/googleplay.svg"
 import { Link } from "react-router";
 import Footer from "../components/Footer";
 import lock from "../Assets/lockartwork2.svg"
+import { motion } from "framer-motion";
 
 export function meta({}: Route.MetaArgs) {
     return [
@@ -15,7 +14,7 @@ export function meta({}: Route.MetaArgs) {
       { name: "description", content: "Welcome to 2YOU!" },
     ];
   }
-
+  
 export default function Privacy() {
     return(
         <div id="main-container" className="min-h-screen bg-white">
@@ -24,7 +23,12 @@ export default function Privacy() {
                 <div className="container mx-auto px-4 py-4">
                     <nav className="flex items-center justify-between">
                         <div className="flex items-center">
-                            <span  className="text-3xl font-bold text-red-600 cursor-pointer">2YOU</span>
+                            <Link to="/" className="flex items-center">
+                                <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
+                                    <span className="text-white text-2xl font-bold">2</span>
+                                </div>
+                                <span className="ml-2 text-2xl font-bold text-red-600">YOU</span>
+                            </Link>
                         </div>
                         <div className="hidden md:flex space-x-8">
                             <a href="#features" className="text-gray-600 hover:text-red-600">Features</a>
@@ -42,7 +46,7 @@ export default function Privacy() {
             </header>
 
             {/* Hero Section */}
-            <section id="hero" className="pt-24 h-[800px]">
+            <section id="hero" className="pt-24 min-h-[800px]">
                 <div className="container mx-auto px-4 py-16">
                     <div className="flex flex-col md:flex-row items-center">
                         <div className="md:w-1/2 mb-8 md:mb-0">
@@ -53,25 +57,35 @@ export default function Privacy() {
                                 Experience next-level privacy with VPN-enabled chats, anonymous messaging, and unique security features that put you in control.
                             </p>
                             <div className="flex space-x-4">
-                            <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer" className="ml-4">
-                                <img
-                                src={appstoresvg}
-                                alt="Download on the App Store"
-                                className="w-40 h-auto"
-                                />
-                            </a>
-                            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="ml-2">
-                                <img
-                                src={googleplaysvg}
-                                alt="Get it on Google Play"
-                                className="w-40 h-auto"
-                                />
-                            </a>
+                                <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer" className="ml-4">
+                                    <img
+                                        src={appstoresvg}
+                                        alt="Download on the App Store"
+                                        className="w-40 h-auto"
+                                    />
+                                </a>
+                                <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="ml-2">
+                                    <img
+                                        src={googleplaysvg}
+                                        alt="Get it on Google Play"
+                                        className="w-40 h-auto"
+                                    />
+                                </a>
                             </div>
                         </div>
-                        <div className="md:w-1/2 my-auto">
-                            <img className="w-full h-auto" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2c773fc097-680a71ff3be64de7a52d.png" alt="illustration of people chatting with floating message bubbles and privacy symbols, handcrafted style, red and white color scheme" />
-                        </div>
+                        <motion.div
+                            className="md:w-1/2 my-auto"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <img
+                                className="w-full h-auto max-h-[600px] object-contain"
+                                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2c773fc097-680a71ff3be64de7a52d.png"
+                                alt="illustration of people chatting with floating message bubbles and privacy symbols, handcrafted style, red and white color scheme"
+                            />
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -81,59 +95,117 @@ export default function Privacy() {
                 <div className="container mx-auto px-4">
                     <h2 className="text-4xl text-black font-bold text-center mb-16">Powerful Privacy Features</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* VPN-Enabled Chat */}
-                        <div id="feature-vpn" className="bg-white p-8 rounded-2xl shadow-lg">
-                            <div className="text-red-600 text-3xl mb-4">
-                                <i className="fa-solid fa-shield-halved"></i>
-                            </div>
+
+                        {/* 1. VPN-Enabled Chat */}
+                        <motion.div whileHover="hover" initial="rest" animate="rest" className="bg-white p-8 rounded-2xl shadow-lg">
+                            <motion.div
+                                className="text-red-600 text-3xl mb-4 flex"
+                                variants={{
+                                    rest: { scale: 1, },
+                                    hover: {
+                                    scale: 1.03,
+                                    transition: { duration: 0.5 },
+                                    },
+                                }}
+                            >
+                                <FontAwesomeIcon icon={faShieldHalved} />
+                            </motion.div>
                             <h3 className="text-2xl text-black font-bold mb-4">VPN-Enabled Chat</h3>
                             <p className="text-gray-600">Secure your conversations with built-in VPN technology, ensuring your messages stay private and protected.</p>
-                        </div>
+                        </motion.div>
 
-                        {/* Anonymous Chat */}
-                        <div id="feature-anonymous" className="bg-white p-8 rounded-2xl shadow-lg">
-                            <div className="text-red-600 text-3xl mb-4">
-                                <i className="fa-solid fa-user-secret"></i>
-                            </div>
+                        {/* 2. Anonymous Chat */}
+                        <motion.div whileHover="hover" initial="rest" animate="rest" className="bg-white p-8 rounded-2xl shadow-lg">
+                            <motion.div
+                                className="text-red-600 text-3xl mb-4 flex"
+                                variants={{
+                                    rest: { opacity: 0.9, filter: "blur(0px)" },
+                                    hover: {
+                                    opacity: 1,
+                                    filter: "blur(1px)",
+                                    transition: { duration: 0.6 },
+                                    },
+                                }}
+                            >
+                                <FontAwesomeIcon icon={faUserSecret} />
+                            </motion.div>
                             <h3 className="text-2xl text-black font-bold mb-4">Anonymous Chat</h3>
                             <p className="text-gray-600">Chat without revealing your identity. Perfect for private conversations and maintaining anonymity.</p>
-                        </div>
+                        </motion.div>
 
-                        {/* Disappearing Messages */}
-                        <div id="feature-disappearing" className="bg-white p-8 rounded-2xl shadow-lg">
-                            <div className="text-red-600 text-3xl mb-4">
-                                <i className="fa-solid fa-clock"></i>
-                            </div>
+                        {/* 3. Disappearing Messages */}
+                        <motion.div whileHover="hover" initial="rest" animate="rest" className="bg-white p-8 rounded-2xl shadow-lg">
+                            <motion.div
+                                className="text-red-600 text-3xl mb-4 flex"
+                                variants={{
+                                    rest: { opacity: 1 },
+                                    hover: {
+                                        opacity: [1, 0.3, 1],
+                                        transition: { duration: 2.0 },
+                                    },
+                                }}
+                            >
+                                <FontAwesomeIcon icon={faClock} />
+                            </motion.div>
                             <h3 className="text-2xl text-black font-bold mb-4">Disappearing Messages</h3>
                             <p className="text-gray-600">Set messages to automatically disappear after a specified time, leaving no trace behind.</p>
-                        </div>
+                        </motion.div>
 
-                        {/* Timed Messages */}
-                        <div id="feature-timed" className="bg-white p-8 rounded-2xl shadow-lg">
-                            <div className="text-red-600 text-3xl mb-4">
-                                <i className="fa-solid fa-hourglass"></i>
-                            </div>
+                        {/* 5. Timed Messages */}
+                        <motion.div whileHover="hover" initial="rest" animate="rest" className="bg-white p-8 rounded-2xl shadow-lg">
+                            <motion.div
+                                variants={{
+                                    rest: { rotate: 0 },
+                                    hover: {
+                                    rotate: 360,
+                                    transition: {
+                                    duration: 0.8,
+                                    ease: "easeInOut" },
+                                    },
+                                }}
+                                style={{ display: "inline-block" }}
+                            >
+                                <FontAwesomeIcon icon={faHourglass} className="text-red-600 text-3xl" />
+                            </motion.div>
                             <h3 className="text-2xl text-black font-bold mb-4">Timed Messages</h3>
                             <p className="text-gray-600">Schedule your messages to be sent at the perfect moment, maintaining control over your communication.</p>
-                        </div>
+                        </motion.div>
 
-                        {/* Archive Lock */}
-                        <div id="feature-archive" className="bg-white p-8 rounded-2xl shadow-lg">
-                            <div className="text-red-600 text-3xl mb-4">
-                                <i className="fa-solid fa-lock"></i>
-                            </div>
+                        {/* 5. Archive Lock */}
+                        <motion.div whileHover="hover" initial="rest" animate="rest" className="bg-white p-8 rounded-2xl shadow-lg">
+                            <motion.div
+                                className="text-red-600 text-3xl mb-4 flex"
+                                variants={{
+                                    rest: { scale: 1 },
+                                    hover: {
+                                    scale: [1, 0.9, 1],
+                                    transition: { duration: 0.4 },
+                                    },
+                                }}
+                            >
+                                <FontAwesomeIcon icon={faLock} />
+                            </motion.div>
                             <h3 className="text-2xl text-black font-bold mb-4">Archive Lock</h3>
                             <p className="text-gray-600">Keep your archived messages secure with an additional layer of protection.</p>
-                        </div>
+                        </motion.div>
 
-                        {/* Secondary Password */}
-                        <div id="feature-password" className="bg-white p-8 rounded-2xl shadow-lg">
-                            <div className="text-red-600 text-3xl mb-4">
-                                <i className="fa-solid fa-key"></i>
-                            </div>
+                        {/* 6. Secondary Password */}
+                        <motion.div whileHover="hover" initial="rest" animate="rest" className="bg-white p-8 rounded-2xl shadow-lg">
+                            <motion.div
+                                variants={{
+                                    rest: { rotateZ: 0 },
+                                    hover: {
+                                    rotateZ: [0, -15, 15, -10, 10, 0],
+                                    transition: { duration: 0.6, ease: "easeInOut" },
+                                    },
+                                }}
+                                style={{ display: "inline-block" }}
+                            >
+                                <FontAwesomeIcon icon={faKey} className="text-red-600 text-3xl" />
+                            </motion.div>
                             <h3 className="text-2xl text-black font-bold mb-4">Secondary Password</h3>
                             <p className="text-gray-600">Use a special password to make deleted and archived messages appear blank, adding an extra layer of privacy.</p>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -142,9 +214,15 @@ export default function Privacy() {
             <section id="security" className="py-20">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center">
-                        <div className="md:w-1/2 mb-8 md:mb-0">
+                        <motion.div 
+                            className="md:w-1/2 mb-8 md:mb-0" 
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.6 }}
+                        >
                             <img className="w-full h-auto" src={lock} alt="illustration of a secure messaging interface with lock symbols and privacy shields, handcrafted style" />
-                        </div>
+                        </motion.div>
                         <div className="md:w-1/2 md:pl-12">
                             <h2 className="text-4xl text-black font-bold mb-6">Your Privacy is Our Priority</h2>
                             <div className="space-y-6">

@@ -6,6 +6,7 @@ import appstoresvg from "../Assets/appstore.svg"
 import googleplaysvg from "../Assets/googleplay.svg"
 import { Link } from "react-router";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -83,7 +84,12 @@ export default function Home() {
               </a>
               </div>
             </div>
-            <div className="md:w-1/2 mt-12 md:mt-0">
+            <motion.div
+              className="md:w-1/2 mt-12 md:mt-0"
+              initial={{ x: 200, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
               <div className="relative">
                 <img
                   className="w-[200px] mx-auto"
@@ -91,7 +97,7 @@ export default function Home() {
                   alt="App Mockup"
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -102,23 +108,41 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-16 text-black">Powerful Features for Everyone</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div id="feature-card-1" className="p-6 rounded-xl shadow-lg">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+              <motion.div
+                className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+              >
                 <FontAwesomeIcon icon={faCalendarCheck} className="text-red-600 text-2xl" />
-              </div>
+              </motion.div>
               <h3 className="text-xl font-bold mb-3 text-black">Smart Scheduling</h3>
               <p className="text-gray-600">Effortlessly coordinate meetings with automatic availability checking and calendar integration.</p>
             </div>
             <div id="feature-card-2" className="p-6 rounded-xl shadow-lg">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+              <motion.div 
+                className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+              >
                 <FontAwesomeIcon icon={faShieldHalved} className="text-red-600 text-2xl" />
-              </div>
+              </motion.div>
               <h3 className="text-xl font-bold mb-3 text-black">End-to-End Encryption</h3>
               <p className="text-gray-600">Your conversations are always private with military-grade encryption and optional secure backup.</p>
             </div>
             <div id="feature-card-3" className="p-6 rounded-xl shadow-lg">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+              <motion.div 
+              className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4"
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6 }}
+              >
                 <FontAwesomeIcon icon={faUsers} className="text-red-600 text-2xl" />
-              </div>
+              </motion.div>
               <h3 className="text-xl font-bold mb-3 text-black">Team Collaboration</h3>
               <p className="text-gray-600">Perfect for BDMs, brokers, and institutions with specialized tools for professional communication.</p>
             </div>

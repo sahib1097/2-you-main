@@ -7,6 +7,7 @@ import appstoresvg from "../Assets/appstore.svg"
 import googleplaysvg from "../Assets/googleplay.svg"
 import { Link } from "react-router";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -95,7 +96,12 @@ export default function Business() {
               </a>
               </div>
             </div>
-            <div className="md:w-1/2 mt-12 md:mt-0">
+            <motion.div
+              className="md:w-1/2 mt-12 md:mt-0"
+              initial={{ x: 200, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
               <div className="relative">
                 <img
                   className="w-[200px] mx-auto"
@@ -103,7 +109,7 @@ export default function Business() {
                   alt="App Mockup"
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -114,23 +120,41 @@ export default function Business() {
           <h2 className="text-4xl font-bold text-center mb-16 text-black">Business without Limits</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div id="feature-card-1" className="p-6 rounded-xl shadow-lg">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+              <motion.div 
+                className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+              >
                 <FontAwesomeIcon icon={faUser} className="text-red-600 text-2xl" />
-              </div>
+              </motion.div>
               <h3 className="text-xl font-bold mb-3 text-black">Unlimited Users</h3>
               <p className="text-gray-600">Scale effortlessly with no restrictions on team size, allowing everyone in your organization to collaborate securely in one unified space.</p>
             </div>
             <div id="feature-card-2" className="p-6 rounded-xl shadow-lg">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+              <motion.div 
+                className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+              >
                 <FontAwesomeIcon icon={faComment} className="text-red-600 text-2xl" />
-              </div>
+              </motion.div>
               <h3 className="text-xl font-bold mb-3 text-black">Unlimited Channels</h3>
               <p className="text-gray-600">Organize discussions, projects, or departments with as many dedicated channels as needed, ensuring clarity and focus for every workflow.</p>
             </div>
             <div id="feature-card-3" className="p-6 rounded-xl shadow-lg">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+              <motion.div 
+                className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+              >                
                 <FontAwesomeIcon icon={faUsers} className="text-red-600 text-2xl" />
-              </div>
+              </motion.div>
               <h3 className="text-xl font-bold mb-3 text-black">Unlimited Collaboration</h3>
               <p className="text-gray-600">Enable seamless teamwork with real-time editing, file sharing, and communication tools—all without caps on usage or creativity.</p>
             </div>

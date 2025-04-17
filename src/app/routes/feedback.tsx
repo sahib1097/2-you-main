@@ -9,7 +9,7 @@ import { CountUpOnVisible } from "../hooks/CountUpOnVisible";
 
 export function meta({}: Route.MetaArgs) {
     return [
-      { title: "2YOU" },
+      { title: "2YOU Feedback" },
       { name: "description", content: "Welcome to 2YOU!" },
     ];
   }

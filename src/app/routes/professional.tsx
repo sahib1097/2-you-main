@@ -7,6 +7,7 @@ import appstoresvg from "../Assets/appstore.svg"
 import googleplaysvg from "../Assets/googleplay.svg"
 import { Link } from "react-router";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -14,6 +15,27 @@ export function meta({}: Route.MetaArgs) {
     { name: "description", content: "Welcome to 2YOU!" },
   ];
 }
+
+type IconVariant = {
+  initial: {};
+  hoverAuto: { x: number[] };
+  hoverFinance: { scale: number[]; opacity: number[] };
+  hoverInsurance: { rotate: number[] };
+  hoverHealthcare: { scale: number[] };
+  hoverGovernment: { y: number[] };
+  hoverLegal: { rotate: number[] };
+};
+
+// Use this type for your variants
+const iconVariants: IconVariant = {
+  initial: {},
+  hoverAuto: { x: [0, 5, -5, 0] },
+  hoverFinance: { scale: [1, 1.15, 1], opacity: [1, 0.8, 1] },
+  hoverInsurance: { rotate: [0, 10, -10, 0] },
+  hoverHealthcare: { scale: [1, 1.2, 1] },
+  hoverGovernment: { y: [0, -6, 0] },
+  hoverLegal: { rotate: [0, 10, -10, 0] },
+};
 
 export default function Professional() {
 
@@ -62,9 +84,23 @@ export default function Professional() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 text-black">
-              <h1 className="text-5xl font-bold mb-6">
-                An upper edge for your sales team to cook 🔥 
-              </h1>
+            <h1 className="text-5xl font-bold mb-6">
+              An upper edge for your sales team to cook{" "}
+              <motion.span
+                animate={{
+                  scale: [1, 1.3, 1],
+                  rotate: [0, 10, -10, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="inline-block origin-center"
+              >
+                🔥
+              </motion.span>
+            </h1>
               <p className="text-xl mb-8">
                 Professional and Enterprise connect seamlessly together to provide a unique experience that allows your sales team to communicate effectively with the businesses that keep your company in motion.
               </p>
@@ -95,7 +131,12 @@ export default function Professional() {
               </a>
               </div>
             </div>
-            <div className="md:w-1/2 mt-12 md:mt-0">
+            <motion.div
+              className="md:w-1/2 mt-12 md:mt-0"
+              initial={{ x: 200, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
               <div className="relative">
                 <img
                   className="w-[200px] mx-auto"
@@ -103,7 +144,7 @@ export default function Professional() {
                   alt="App Mockup"
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -114,23 +155,41 @@ export default function Professional() {
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Powerful Features for Everyone</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div id="feature-card-1" className="p-6 rounded-xl bg-white shadow-lg">
-              <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+              <motion.div 
+                className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+              >
                 <FontAwesomeIcon icon={faUsers} className="text-red-600 text-2xl" />
-              </div>
+              </motion.div>
               <h3 className="text-xl font-bold mb-3 text-black">Team Collaboration</h3>
               <p className="text-black">Empower brokers, advisors, agents, and sales gurus with unified tools for secure, real-time communication, task management, and shared workflows tailored to high-stakes industries.</p>
             </div>
             <div id="feature-card-2" className="p-6 rounded-xl bg-white shadow-lg">
-              <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+              <motion.div 
+                className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+              >
                 <FontAwesomeIcon icon={faGears} className="text-red-600 text-2xl" />
-              </div>
+              </motion.div>
               <h3 className="text-xl font-bold mb-3 text-black">The Usual Integrations</h3>
               <p className="text-black">Boost productivity with seamless CRM integrations like Salesforce, HubSpot, and more—sync data, automate tasks, and manage pipelines without leaving the platform.</p>
             </div>
             <div id="feature-card-3" className="p-6 rounded-xl bg-white shadow-lg">
-              <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+              <motion.div 
+                className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+              >
                 <FontAwesomeIcon icon={faPlug} className="text-red-600 text-2xl" />
-              </div>
+              </motion.div>
               <h3 className="text-xl font-bold mb-3 text-black">Direct Connection</h3>
               <p className="text-black">Engage instantly with representatives from partner enterprises via direct, frictionless communication channels, bypassing intermediaries to accelerate decisions and deals.</p>
             </div>
@@ -145,22 +204,36 @@ export default function Professional() {
 
           <div className="flex justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl">
-              {[
-                { icon: faCar, label: "Auto", color: "text-gray-600" },
-                { icon: faCoins, label: "Finance", color: "text-yellow-400" },
-                { icon: faHouseChimneyCrack, label: "Insurance", color: "text-indigo-500" },
-                { icon: faSuitcaseMedical, label: "Healthcare", color: "text-red-600" },
-                { icon: faBuildingColumns, label: "Government", color: "text-sky-500" },
-                { icon: faGavel, label: "Legal", color: "text-yellow-600" },
-              ].map((item, idx) => (
-                <div
+            {[
+              { icon: faCar, label: "Auto", color: "text-gray-600" },
+              { icon: faCoins, label: "Finance", color: "text-yellow-400" },
+              { icon: faHouseChimneyCrack, label: "Insurance", color: "text-indigo-500" },
+              { icon: faSuitcaseMedical, label: "Healthcare", color: "text-red-600" },
+              { icon: faBuildingColumns, label: "Government", color: "text-sky-500" },
+              { icon: faGavel, label: "Legal", color: "text-yellow-600" },
+            ].map((item, idx) => {
+              const hoverVariantKey = `hover${item.label.replace(/\s/g, '')}`;
+
+              return (
+                <motion.div
                   key={idx}
                   className="bg-white rounded-xl shadow-md w-[260px] h-[200px] flex flex-col items-center justify-center text-center hover:shadow-xl transition"
+                  initial="initial"
+                  whileHover="hover"
                 >
-                  <FontAwesomeIcon icon={item.icon} className={`${item.color} text-4xl mb-3`} />
+                  <motion.div
+                    variants={{
+                      initial: iconVariants.initial,
+                      hover: iconVariants[hoverVariantKey as keyof typeof iconVariants],
+                    }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <FontAwesomeIcon icon={item.icon} className={`${item.color} text-4xl mb-3`} />
+                  </motion.div>
                   <h3 className="text-xl font-semibold text-black">{item.label}</h3>
-                </div>
-              ))}
+                </motion.div>
+              );
+            })}
             </div>
           </div>
         </div>
@@ -203,9 +276,16 @@ export default function Professional() {
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2 mt-12 md:mt-0">
-              <img className="rounded-xl mx-5" src={mobilemsg} alt="encrypted chat" />
-            </div>
+            <motion.div 
+              className="md:w-1/2 mt-12 md:mt-0"
+              initial={{ x: 200, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <div className="relative">
+                <img className="rounded-xl mx-5" src={mobilemsg} alt="encrypted chat" />
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

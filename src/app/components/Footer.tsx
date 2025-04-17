@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router";
 {/*import ToYou from "../Assets/2YOU.png"*/}
-import subprime from "../Assets/Subprime.png"
+import subprime from "../Assets/subprime platforms White transparent.png"
 import deep from "../Assets/DeepIDV.png"
 import nextquest from "../Assets/Next Quest.png"
 
@@ -103,8 +103,8 @@ const Footer = () => {
             {/* Column 1: Subprime Branding (flush left) */}
             <div className="shrink-0 md:w-1/3">
               {/* Placeholder Icon */}
-              <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center mb-4">
-                <img src={subprime} alt="Subprime" className="w-6 h-6" />              
+              <div className="w-40 h-20 bg-black rounded-full flex items-center justify-center mb-4">
+                <img src={subprime} alt="Subprime" />              
               </div>
               <p className="font-semibold text-white text-base mb-2">Powered by Subprime Platforms</p>
               <p className="max-w-sm">
@@ -145,17 +145,17 @@ const Footer = () => {
                 <h4 className="text-white font-semibold mb-3">Company</h4>
                 <ul className="space-y-3">
                   <li>
-                    <a href="https://yourmaincompany.com/about" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                    <a href="https://www.subprimeplatforms.com/about" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                       About Us
                     </a>
                   </li>
                   <li>
-                    <a href="https://yourmaincompany.com/contact" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                    <a href="" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                       Contact
                     </a>
                   </li>
                   <li>
-                    <a href="https://yourmaincompany.com/careers" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                    <a href="https://subprimeplatforms.com/careers" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                       Careers
                     </a>
                   </li>
