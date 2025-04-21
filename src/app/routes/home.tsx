@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mobilephone from "../Assets/2You Mobile.png";
 import appstoresvg from "../Assets/appstore.svg"
 import googleplaysvg from "../Assets/googleplay.svg"
-import { Link } from "react-router";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
+import Header from "../components/Header";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -20,68 +20,34 @@ export default function Home() {
   return (
     <div>
       {/* Header */}
-      <header id="header" className="fixed w-full z-50 bg-red-600">
-        <nav className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between w-full">
-            {/* Logo */}
-            <div className="flex items-center">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <span className="text-red-600 text-2xl font-bold">2</span>
-              </div>
-              <span className="ml-2 text-2xl font-bold text-white">YOU</span>
-            </div>
-
-            {/* Right side navigation */}
-            <div className="flex items-center space-x-6">
-              <Link to="/business" className="text-white font-semibold hover:text-red-200">
-                Business
-              </Link>
-              <Link to="/enterprise" className="text-white font-semibold hover:text-red-200">
-                Enterprise
-              </Link>
-              <Link to="/professional" className="text-white font-semibold hover:text-red-200">
-                Professional
-              </Link>
-              
-              {/* Sign In Button */}
-              <button className="ml-4 bg-red-600 text-white font-semibold hover:text-red-200">
-                Log In
-              </button>
-              <button className="ml-4 bg-white text-red-600 px-6 py-2 rounded-full font-medium hover:bg-red-100">
-                Sign Up
-              </button>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <Header/>
 
       {/* Hero Section */}
-      <section className="bg-red-600 h-screen flex items-center">
+      <section className="bg-red-600 min-h-screen pt-24 pb-12 flex items-center">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 text-white">
-              <h1 className="text-5xl font-bold mb-6">
-                {/*add 0.5 spacing*/}
+            <div className="md:w-1/2 text-white text-center md:text-left mt-10 md:mt-0">
+              <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-3">
                 The ultimate (secure) communication Platform
               </h1>
-              <p className="text-xl mb-8">
+              <p className="text-base sm:text-xl mb-8">
                 Effortlessly connect with friends and family. Share moments, chat instantly, and stay closer than ever with intuitive features designed for your personal life.
               </p>
-              <div className="flex space-x-4">
-              <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer" className="ml-4">
-                <img
-                  src={appstoresvg}
-                  alt="Download on the App Store"
-                  className="w-40 h-auto"
-                />
-              </a>
-              <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="ml-2">
-                <img
-                  src={googleplaysvg}
-                  alt="Get it on Google Play"
-                  className="w-40 h-auto"
-                />
-              </a>
+              <div className="flex space-x-4 justify-center md:justify-start">
+                <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={appstoresvg}
+                    alt="Download on the App Store"
+                    className="w-40 h-auto"
+                  />
+                </a>
+                <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={googleplaysvg}
+                    alt="Get it on Google Play"
+                    className="w-40 h-auto"
+                  />
+                </a>
               </div>
             </div>
             <motion.div
@@ -101,6 +67,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
       {/* Features Section */}
       <section id="features" className="py-20 bg-white">

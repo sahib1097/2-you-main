@@ -49,7 +49,12 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="text-gray-400 hover:text-white cursor-pointer">About</li>
               <li className="text-gray-400 hover:text-white cursor-pointer">Contact</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Careers</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">
+                <a href="https://subprimeplatforms.com/careers" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                    Careers
+                </a>
+              </li>
+              
             </ul>
           </div>
 
@@ -70,24 +75,24 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Social</h4>
             <div className="flex space-x-4">
-              <button>
+              <a href="https://www.linkedin.com/showcase/2you-chat" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon
                   icon={faLinkedin}
                   className="text-xl text-gray-400 hover:text-white"
                 />
-              </button>
-              <button>
+              </a>
+              <a href="https://x.com/2you_chat" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon
                   icon={faSquareXTwitter}
                   className="text-xl text-gray-400 hover:text-white"
                 />
-              </button>
-              <button>
+              </a>
+              <a href="https://www.facebook.com/2you" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon
                   icon={faSquareFacebook}
                   className="text-xl text-gray-400 hover:text-white"
                 />
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -113,7 +118,7 @@ const Footer = () => {
             </div>
 
             {/* Column Group: Other Products + Company (aligned to the right of Subprime) */}
-            <div className="flex flex-col md:flex-row w-full mt-12 md:mt-0">
+            <div className="flex flex-col md:flex-row w-full mt-12 md:mt-0 space-y-12 md:space-y-0">
               
               {/* Spacer */}
               <div className="hidden md:block md:w-1/3" />
@@ -124,13 +129,13 @@ const Footer = () => {
                 <ul className="space-y-3">
                   <li className="flex items-center space-x-3">
                     <img src={deep} alt="DeepIDV" className="w-6 h-6" />
-                    <a href="https://product2.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                    <a href="http://www.deepidv.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                       DeepIDV
                     </a>
                   </li>
                   <li className="flex items-center space-x-3">
                     <img src={nextquest} alt="NextQuest" className="w-6 h-6" />
-                    <a href="https://product3.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                    <a href="mynext.quest" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                       NextQuest
                     </a>
                   </li>
