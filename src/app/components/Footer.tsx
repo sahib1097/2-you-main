@@ -38,7 +38,9 @@ const Footer = () => {
               <li className="text-gray-400 hover:text-white cursor-pointer">
                   <Link to="/privacy" className="text-gray-400 hover:text-white cursor-pointer">Privacy</Link>
               </li>              
-              <li className="text-gray-400 hover:text-white cursor-pointer">Security</li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">
+                <Link to="/security" className="text-gray-400 hover:text-white cursor-pointer">Security</Link>
+              </li>
               <li className="text-gray-400 hover:text-white cursor-pointer">Pricing</li>
             </ul>
           </div>
