@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import DisappearingMedia from "../DisappearingMedia";
+import DisappearingMedia from "./DisappearingMedia";
 
 const DisappearingMediaSection = () => (
   <motion.div

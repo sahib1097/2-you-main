@@ -9,4 +9,5 @@ export default [
   route("feedback", "routes/feedback.tsx"),
   route("privacy", "routes/privacy.tsx"),
   route("security", "routes/security.tsx"),
+  route("support", "routes/support.tsx")
 ] satisfies RouteConfig;
