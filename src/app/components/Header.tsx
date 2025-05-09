@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router';
+import Logo from '../Assets/2-you-logo.png'
 
 interface HeaderProps {
   variant?: 'red' | 'white';
@@ -18,10 +19,11 @@ const Header: React.FC<HeaderProps> = ({ variant = 'red' }) => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <div className={`w-10 h-10 ${isRed ? 'bg-white' : 'bg-red-600'} rounded-full flex items-center justify-center`}>
-                <span className={`text-2xl font-bold ${isRed ? 'text-red-600' : 'text-white'}`}>2</span>
-              </div>
-              <span className={`ml-2 text-2xl font-bold ${isRed ? 'text-white' : 'text-red-600'}`}>YOU</span>
+              <img
+                src={Logo}
+                alt="Logo"
+                className="w-15 h-15"
+              />
             </Link>
           </div>
 
