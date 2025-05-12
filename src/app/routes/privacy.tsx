@@ -12,15 +12,24 @@ import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "2YOU Privacy" },
-    { name: "description", content: "Welcome to 2YOU!" },
+    {
+      title: "🔒 Privacy at 2You – Your Data, Your Control | End-to-End Encryption",
+    },
+    {
+      name: "description",
+      content: "Your chats belong to you. 2You uses military-grade encryption and zero data storage to keep conversations truly private.",
+    },
+    {
+      name: "keywords",
+      content: "privacy-focused chat, encrypted messaging, data control, no data retention",
+    },
   ];
 }
 
 const Privacy = () => {
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden">
-    <Header/>
+      <Header />
       <HeroSection />
       <FeatureSection />
       <PrivacyFeatures />
@@ -29,7 +38,7 @@ const Privacy = () => {
       <SeparateAccounts />
       <CloudBackup />
       <FAQ />
-      <Footer/>
+      <Footer />
     </main>
   );
 };

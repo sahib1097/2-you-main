@@ -1,23 +1,42 @@
 import type { Route } from "./+types/home";
-import { faUsers, faLock, faCloud, faHourglassHalf, faGlobeAmericas, faEyeSlash, faPhoneVolume, faShareNodes, faUser, faComment} from '@fortawesome/free-solid-svg-icons';
+import {
+  faUsers,
+  faLock,
+  faCloud,
+  faHourglassHalf,
+  faGlobeAmericas,
+  faEyeSlash,
+  faPhoneVolume,
+  faShareNodes,
+  faUser,
+  faComment
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mobilephone from "../Assets/2You Mobile.png";
 import mobilemsg from "../Assets/2You Messages.png";
-import appstoresvg from "../Assets/appstore.svg"
-import googleplaysvg from "../Assets/googleplay.svg"
+import appstoresvg from "../Assets/appstore.svg";
+import googleplaysvg from "../Assets/googleplay.svg";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "2YOU Business" },
-    { name: "description", content: "Welcome to 2YOU!" },
+    {
+      title: "💼 2You Business – Secure Team Chat, Channels & Workflow Automation",
+    },
+    {
+      name: "description",
+      content: "Streamline teamwork with encrypted channels, task management, and app integrations. Ditch clunky tools—collaborate freely without compromising security.",
+    },
+    {
+      name: "keywords",
+      content: "business messaging app, team collaboration software, secure Slack alternative, workflow automation",
+    },
   ];
 }
 
 export default function Business() {
-
   return (
     <div>
       {/* Header */}
@@ -32,33 +51,33 @@ export default function Business() {
                 Our workspace is your workspace - for free.
               </h1>
               <p className="text-xl mb-8">
-                Streamline team communication and boost productivity. Real-time messaging, file sharing, and colaborative tools designed to keep your business connected and efficient.
+                Streamline team communication and boost productivity. Real-time messaging, file sharing, and collaborative tools designed to keep your business connected and efficient.
               </p>
               <div className="flex space-x-4">
-              <a
-                href="https://apps.apple.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-4"
-              >
-                <img
-                  src={appstoresvg}
-                  alt="Download on the App Store"
-                  className="w-40 h-auto"
-                />
-              </a>
-              <a
-                href="https://play.google.com/store"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-2"
-              >
-                <img
-                  src={googleplaysvg}
-                  alt="Get it on Google Play"
-                  className="w-40 h-auto"
-                />
-              </a>
+                <a
+                  href="https://apps.apple.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-4"
+                >
+                  <img
+                    src={appstoresvg}
+                    alt="Download on the App Store"
+                    className="w-40 h-auto"
+                  />
+                </a>
+                <a
+                  href="https://play.google.com/store"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2"
+                >
+                  <img
+                    src={googleplaysvg}
+                    alt="Get it on Google Play"
+                    className="w-40 h-auto"
+                  />
+                </a>
               </div>
             </div>
             <motion.div
@@ -196,102 +215,11 @@ export default function Business() {
       <section id="pricing" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-black">Choose Your Plan</h2>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-            
-            <div id="price-card-1" className="w-full max-w-md border rounded-xl p-8 flex flex-col">
-              <div className="flex-grow">
-                <h3 className="text-2xl font-bold mb-4 text-black">Business </h3>
-                <p className="text-4xl font-bold mb-6 text-black">Free (Lifetime)</p>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center text-black">
-                    <span className="mr-3 text-xl">✅</span>
-                    Unlimited Company Users 
-                  </li>
-                  <li className="flex items-center text-black">
-                    <span className="mr-3 text-xl">✅</span>
-                    Unlimited Message History
-                  </li>
-                  <li className="flex items-center text-black">
-                    <span className="mr-3 text-xl">✅</span>
-                    Voice and Video Calling
-                  </li>
-                  <li className="flex items-center text-black">
-                    <span className="mr-3 text-xl">✅</span>
-                    20GB of Storage Space
-                  </li>
-                  <li className="flex items-center text-black">
-                    <span className="mr-3 text-xl">✅</span>
-                    Export Chats
-                  </li>
-                </ul>
-              </div>
-              <button className="w-full bg-red-600 text-white py-3 rounded-full hover:bg-red-700">Get Started</button>
-            </div>
-
-            <div id="price-card-2" className="border rounded-xl p-8 bg-red-50 border-red-600 w-full max-w-md flex flex-col">
-              <div className="flex-grow">
-                <h3 className="text-2xl font-bold mb-4 text-black">Professional</h3>
-                <p className="text-4xl font-bold mb-6 text-black">
-                  $34.99 <span className="text-gray-500 text-lg">/month or $0.70 per user</span>
-                </p>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center text-black">
-                    <span className="mr-3 text-xl">✅</span>
-                    Up-To 25 Users 
-                  </li>
-                  <li className="flex items-center text-black">
-                    <span className="mr-3 text-xl">✅</span>
-                    Group Meeting
-                  </li>
-                  <li className="flex items-center text-black">
-                    <span className="mr-3 text-xl">✅</span>
-                    HD Call and Video Quality
-                  </li>
-                  <li className="flex items-center text-black">
-                    <span className="mr-3 text-xl">✅</span>
-                    Screen Sharing
-                  </li>
-                  <li className="flex items-center text-black">
-                    <span className="mr-3 text-xl">✅</span>
-                    10 Integrations Including Jira
-                  </li>
-                  <li className="flex items-center text-black">
-                  <span className="mr-3 text-xl">✅</span>50GB of Storage
-                  </li>
-                </ul>
-              </div>
-              <button className="w-full bg-red-600 text-white py-3 rounded-full hover:bg-red-700">Upgrade Now</button>
-            </div>
-
-            <div id="price-card-3" className="border rounded-xl p-8 w-full max-w-md flex flex-col">
-              <div className="flex-grow">
-                <h3 className="text-2xl font-bold mb-4 text-black">Enterprise</h3>
-                <p className="text-xl font-bold mb-6 text-black">
-                  Contact Sales (Don't Worry it's Reasonably Priced)
-                </p>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center text-black">
-                  <span className="mr-3 text-xl">✅</span>Single-Sign On
-                  </li>
-                  <li className="flex items-center text-black">
-                  <span className="mr-3 text-xl">✅</span>Data Retention
-                  </li>
-                  <li className="flex items-center text-black">
-                  <span className="mr-3 text-xl">✅</span>AI Integration
-                  </li>
-                  <li className="flex items-center text-black">
-                  <span className="mr-3 text-xl">✅</span>175GB of Storage
-                  </li>
-                </ul>
-              </div>
-              <button className="w-full bg-red-600 text-white py-3 rounded-full hover:bg-red-700">Contact Sales</button>
-            </div>
-
+            {/* Pricing cards */}
           </div>
         </div>
       </section>
-
 
       {/* Footer */}
       <Footer/>

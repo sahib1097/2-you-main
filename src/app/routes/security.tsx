@@ -13,64 +13,74 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import type { Route } from "./+types/home";
 
-
 export function meta({}: Route.MetaArgs) {
-    return [
-      { title: "2YOU Security" },
-      { name: "description", content: "Welcome to 2YOU!" },
-    ];
-  }
+  return [
+    {
+      title: "🛡️ Security First – How 2You Protects Your Conversations",
+    },
+    {
+      name: "description",
+      content: "Built with open-source code and peer-reviewed encryption, 2You.chat ensures your messages stay for your eyes only.",
+    },
+    {
+      name: "keywords",
+      content: "secure messaging, open-source security, encryption protocols, hack-proof chat",
+    },
+  ];
+}
 
 const SecurityPageContent: React.FC = () => {
-    const { fortressMode } = useSecurityContext();
-  
-    useEffect(() => {
-      document.title = fortressMode ? "2You - Fortress Mode" : "2You - Security";
-  
-      if (fortressMode) {
-        document.body.classList.add('fortress-bg');
-      } else {
-        document.body.classList.remove('fortress-bg');
-      }
-  
-      return () => {
-        document.body.classList.remove('fortress-bg');
-      };
-    }, [fortressMode]);
+  const { fortressMode } = useSecurityContext();
 
-    return (
-        <div className={`min-h-screen transition-colors duration-500 ${fortressMode ? 'bg-[#1A1A1A] text-white' : 'bg-white text-[#1A1A1A]'}`}>
-          <div className="relative overflow-x-hidden">
-            {fortressMode && <div className="scan-line"></div>}
-    
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <header className="py-8 flex justify-end">
-                <SecurityStatusIndicator />
-              </header>
-    
-              <main>
-                <HeroSection />
-                <SecurityProtocolsSection />
-                <InfrastructureSection />
-                <ThreatResponseSection />
-                <TransparencySection />
-                <StressTestDemo />
-              </main>
-    
-              <SecurityFooter />
-            </div>
-          </div>
-        </div>
-      );
+  useEffect(() => {
+    document.title = fortressMode
+      ? "2You - Fortress Mode"
+      : "2You - Security";
+
+    if (fortressMode) {
+      document.body.classList.add('fortress-bg');
+    } else {
+      document.body.classList.remove('fortress-bg');
+    }
+
+    return () => {
+      document.body.classList.remove('fortress-bg');
     };
-    
-    // Top-level component that wraps the content in SecurityProvider
-    const SecurityPage: React.FC = () => (
-      <SecurityProvider>
-        <Header/>
-        <SecurityPageContent />
-        <Footer/>
-      </SecurityProvider>
-    );
-    
-    export default SecurityPage;
+  }, [fortressMode]);
+
+  return (
+    <div className={`min-h-screen transition-colors duration-500 ${fortressMode ? 'bg-[#1A1A1A] text-white' : 'bg-white text-[#1A1A1A]'}`}>
+      <div className="relative overflow-x-hidden">
+        {fortressMode && <div className="scan-line"></div>}
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <header className="py-8 flex justify-end">
+            <SecurityStatusIndicator />
+          </header>
+
+          <main>
+            <HeroSection />
+            <SecurityProtocolsSection />
+            <InfrastructureSection />
+            <ThreatResponseSection />
+            <TransparencySection />
+            <StressTestDemo />
+          </main>
+
+          <SecurityFooter />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Top-level component that wraps the content in SecurityProvider
+const SecurityPage: React.FC = () => (
+  <SecurityProvider>
+    <Header />
+    <SecurityPageContent />
+    <Footer />
+  </SecurityProvider>
+);
+
+export default SecurityPage;

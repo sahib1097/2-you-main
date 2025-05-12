@@ -2,8 +2,8 @@ import type { Route } from "./+types/home";
 import { faCalendarCheck, faShieldHalved, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mobilephone from "../Assets/2You Mobile.png";
-import appstoresvg from "../Assets/appstore.svg"
-import googleplaysvg from "../Assets/googleplay.svg"
+import appstoresvg from "../Assets/appstore.svg";
+import googleplaysvg from "../Assets/googleplay.svg";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
@@ -11,13 +11,21 @@ import FeatureSection from "../components/ui/FeatureSection";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "2YOU" },
-    { name: "description", content: "Welcome to 2YOU!" },
+    {
+      title: "✨ 2You | Secure, Free Messaging & Video Calls – Connect Privately",
+    },
+    {
+      name: "description",
+      content: "2You offers free, encrypted messaging, HD video calls, and cross-platform sync. Join millions who trust privacy-first communication. Download now!",
+    },
+    {
+      name: "keywords",
+      content: "secure messaging app, free chat app, video calls, end-to-end encryption, private communication",
+    },
   ];
 }
 
 export default function Home() {
-
   return (
     <div>
       {/* Header */}
@@ -69,52 +77,10 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* Features Section */}
       <section id="features" className="py-20 bg-white">
         <FeatureSection/>
       </section>
-
-      {/* Security Section */}
-      {/* <section id="security" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2">
-              <h2 className="text-4xl font-bold mb-6 text-black">Demos</h2>
-              
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Pricing Section */}
-      {/* <section id="pricing" className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-black">Yep, Its <span className="text-red-600">FREE FOREVER</span></h2>
-          <div className="flex gap-8 justify-center">
-            <div id="price-card-1" className="border-2 border-gray-600 rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-4 text-black">Personal </h3>
-              <p className="text-4xl font-bold mb-6 text-black">Free</p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center font-semibold text-black">
-                <span className="mr-3 text-xl">💎</span>Premium In-App Purchases Available
-                </li>
-                <li className="flex items-center font-semibold text-black">
-                <span className="mr-3 text-xl">✅</span>Basic chat features
-                </li>
-                <li className="flex items-center font-semibold text-black">
-                <span className="mr-3 text-xl">✅</span>Meeting scheduling
-                </li>
-                <li className="flex items-center font-semibold text-black">
-                <span className="mr-3 text-xl">✅</span>End-to-end encryption
-                </li>
-              </ul>
-              <button className="w-full bg-red-600 text-white py-3 rounded-full hover:bg-red-700">Get Started</button>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
 
       {/* Footer */}
       <Footer/>
