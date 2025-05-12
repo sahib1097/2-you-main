@@ -1,6 +1,5 @@
-
 import React from "react";
-import { Shield, Ghost, MessageSquare, Lock, Users, FileText, Instagram, Video, Text } from "lucide-react";
+import { Shield, Ghost, MessageSquare, Lock, Users, FileText, Instagram, Text } from "lucide-react";
 import FeatureCard from "./FeatureCard";
 
 const features = [
@@ -96,9 +95,9 @@ const FeatureSection = () => {
   return (
     <section className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
-      <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-[#682221]">
-        Exclusive Features
-      </h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-[#682221]">
+          Exclusive Features
+        </h2>
         <div className="space-y-28 md:space-y-40">
           {features.map((feature, index) => (
             <FeatureCard
