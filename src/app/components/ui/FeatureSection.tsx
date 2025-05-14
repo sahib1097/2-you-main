@@ -1,6 +1,15 @@
 import React from "react";
 import { Shield, Ghost, MessageSquare, Lock, Users, FileText, Instagram, Text } from "lucide-react";
 import FeatureCard from "./FeatureCard";
+import chatEncryption from "../../Assets/chatEncryption.webp"
+import ghostChat from "../../Assets/ghostChat.webp"
+import anonymousChat from "../../Assets/anonymousChat.webp"
+import faceIDGate from "../../Assets/faceIDGate.webp"
+import groupChats from "../../Assets/groupsChats.webp"
+import secretChats from "../../Assets/yourSecrets.webp"
+import sixLives from "../../Assets/6lives.webp"
+import socialUniverse from "../../Assets/socialUniverse.webp"
+import chatYourWay from "../../Assets/chatYourWay.webp"
 
 const features = [
   {
@@ -10,7 +19,8 @@ const features = [
     description: "Every message, call, and reel is shielded with military-grade encryption. Backed by SOC-2 and ISO 27001 certifications, we treat your privacy like it's ours.",
     bulletPoints: ["Certified secure", "Zero third-party access", "Self-destructing options"],
     icon: Shield,
-    emojis: ["✅", "✅", "✅"]
+    emojis: ["✅", "✅", "✅"],
+    imageSrc: chatEncryption,  
   },
   {
     id: 2,
@@ -20,7 +30,8 @@ const features = [
     bulletPoints: ["Translucent chats (watch messages fade as they near deletion)", "Set timers (disappear in 10 seconds, 1 hour, or 1 week)", "Ephemeral media (photos/videos auto-delete after viewing)"],
     icon: Ghost,
     emojis: ["👻", "⏳", "📸"],
-    additionalText: "Perfect for concert plans, surprises, or ahem spicy memes."
+    additionalText: "Perfect for concert plans, surprises, or ahem spicy memes.",
+    imageSrc: ghostChat,
   },
   {
     id: 3,
@@ -30,7 +41,8 @@ const features = [
     bulletPoints: ["12-digit username (your only identity)", "Zero logs (we don't track IPs, devices, or timestamps)", "No restrictions (send files, join groups, or post reels – all incognito)"],
     icon: MessageSquare,
     emojis: ["🔢", "🌫️", "🚫"],
-    additionalText: "Like a digital witness protection program, but fun."
+    additionalText: "Like a digital witness protection program, but fun.",
+    imageSrc: anonymousChat,
   },
   {
     id: 4,
@@ -40,7 +52,8 @@ const features = [
     bulletPoints: ["Instant lockdown after failed attempts", "Custom cooldowns (5 min, 1 hour, or 24 hours)", "Spoof-proof (blocks photos, masks, and deepfakes)"],
     icon: Lock,
     emojis: ["📱", "⏲️", "👁️"],
-    additionalText: "Because even your nosy roommate shouldn't see your DMs."
+    additionalText: "Because even your nosy roommate shouldn't see your DMs.",
+    imageSrc: faceIDGate
   },
   {
     id: 5,
@@ -49,7 +62,8 @@ const features = [
     description: "Labels aren't just tags – they're superpowers. Automatically sort your:",
     bulletPoints: ["Fantasy Football League: Track scores, trash-talk, and polls in one place.", "Book Club: Schedule meetings, share highlights, and vote on next reads.", "Work Team: Split topics into #marketing, #dev, or #watercooler – no chaos, just clarity."],
     icon: Users,
-    emojis: ["🏈", "📚", "💼"]
+    emojis: ["🏈", "📚", "💼"],
+    imageSrc: groupChats
   },
   {
     id: 6,
@@ -59,7 +73,8 @@ const features = [
     bulletPoints: ["Deleted/archived messages turn blank", "Starred chats vanish from view"],
     icon: FileText,
     emojis: ["🔒", "🔒"],
-    additionalText: "Like a digital invisibility cloak for your privacy."
+    additionalText: "Like a digital invisibility cloak for your privacy.",
+    imageSrc: secretChats
   },
   {
     id: 7,
@@ -69,7 +84,8 @@ const features = [
     bulletPoints: ["Business | Dating | Gaming | Friends | Pet Parent | [Your Vibe]"],
     icon: Users,
     emojis: ["👔"],
-    additionalText: "Each profile lives in its own bubble – names, settings, and chats never mix."
+    additionalText: "Each profile lives in its own bubble – names, settings, and chats never mix.",
+    imageSrc: sixLives
   },
   {
     id: 8,
@@ -78,7 +94,8 @@ const features = [
     description: "Link Instagram, TikTok, Snapchat, or Pinterest – or create 2You-exclusive reels. Share once, dazzle everywhere.",
     bulletPoints: ["Post vertical videos", "Curate stories", "Cross-app updates"],
     icon: Instagram,
-    emojis: ["🎥", "📸", "🔗"]
+    emojis: ["🎥", "📸", "🔗"],
+    imageSrc: socialUniverse
   },
   {
     id: 9,
@@ -87,7 +104,8 @@ const features = [
     description: "Your chats, your rules:",
     bulletPoints: ["Custom fonts (Comic Sans haters, begone)", "Themes & gradients (moody midnight or neon chaos)", "AI emoji mashups (create your 🥑🦄 \"Guacorn\" monstrosity)"],
     icon: Text,
-    emojis: ["🎨", "🌈", "🤖"]
+    emojis: ["🎨", "🌈", "🤖"],
+    imageSrc: chatYourWay
   }
 ];
 

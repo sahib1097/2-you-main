@@ -11,6 +11,7 @@ type FeatureProps = {
   icon: LucideIcon;
   additionalText?: string;
   emojis?: string[];
+  imageSrc: string; 
 };
 
 type FeatureCardProps = {
@@ -59,19 +60,13 @@ const FeatureCard = ({ feature, isReversed }: FeatureCardProps) => {
       </div>
 
       {/* Image Side */}
-      <div className="w-full md:w-1/2 h-[300px] rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105">
-        <div
-          className={`w-full h-full ${
-            isReversed
-              ? "feature-card-gradient"
-              : "feature-card-gradient-alt"
-          } flex items-center justify-center`}
-        >
-          <p className="text-lg font-medium text-gray-500">
-            Your image goes here
-          </p>
-        </div>
-      </div>
+       <div className="w-full md:w-1/2 h-90 md:h-64 lg:h-90 rounded-xl transform transition-all duration-500 hover:scale-105">
+         <img
+           src={feature.imageSrc}
+           alt={feature.title}
+           className="w-full h-full object-contain"
+         />
+       </div>
     </motion.div>
   );
 };
