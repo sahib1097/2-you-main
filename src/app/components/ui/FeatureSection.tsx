@@ -114,16 +114,18 @@ const FeatureSection = () => {
   return (
     <section className="pb-20 bg-[#fdf2e3]">
       <div className="container max-w-7xl mx-auto px-4">
-        <img
-          src={exclusiveImg}
-          alt="Exclusive Features"
-          className="
-            block mx-auto 
-            mb-8 sm:mb-12 md:mb-16 
-            h-[250px] sm:h-[350px] md:h-[700px] 
-            object-contain
-          "
-        />
+      <img
+         src={exclusiveImg}
+         alt="Exclusive Features"
+         className="
+           block mx-auto
+           w-[90%] md:w-auto
+           mb-8 sm:mb-12 md:mb-16
+           h-[250px] sm:h-[350px] md:h-[700px]
+           object-contain
+         "
+       />
+
 
         <div className="space-y-16 md:space-y-40">
           {features.map((feature, index) => (

@@ -25,7 +25,7 @@ export function meta({}: Route.MetaArgs) {
 
 const Support = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#fdf2e3]">
       <Header />
       <Hero />
       <SupportHub />

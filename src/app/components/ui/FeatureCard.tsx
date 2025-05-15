@@ -60,7 +60,7 @@ const FeatureCard = ({ feature, isReversed }: FeatureCardProps) => {
       </div>
 
       {/* Image Side */}
-       <div className="w-full md:w-1/2 h-90 md:h-64 lg:h-90 rounded-xl transform transition-all duration-500 hover:scale-105">
+       <div className="w-full md:w-1/2 h-100 md:h-64 lg:h-100 rounded-xl transform transition-all duration-500 hover:scale-105">
          <img
            src={feature.imageSrc}
            alt={feature.title}

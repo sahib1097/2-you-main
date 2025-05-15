@@ -49,7 +49,7 @@ const SecurityPageContent: React.FC = () => {
   }, [fortressMode]);
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${fortressMode ? 'bg-[#1A1A1A] text-white' : 'bg-white text-[#1A1A1A]'}`}>
+    <div className={`min-h-screen transition-colors duration-500 ${fortressMode ? 'bg-[#1A1A1A] text-white' : 'bg-[#fdf2e3] text-[#1A1A1A]'}`}>
       <div className="relative overflow-x-hidden">
         {fortressMode && <div className="scan-line"></div>}
 

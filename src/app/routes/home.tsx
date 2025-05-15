@@ -1,7 +1,7 @@
 import type { Route } from "./+types/home";
 import { faCalendarCheck, faShieldHalved, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import mobilephone from "../Assets/2You Mobile.png";
+import mobilephone from "../Assets/loginScreen.webp";
 import appstoresvg from "../Assets/appstore.svg";
 import googleplaysvg from "../Assets/googleplay.svg";
 import Footer from "../components/Footer";
@@ -67,7 +67,7 @@ export default function Home() {
             >
               <div className="relative">
                 <img
-                  className="w-[200px] mx-auto"
+                  className="w-[350px] mx-auto"
                   src={mobilephone}
                   alt="App Mockup"
                 />
