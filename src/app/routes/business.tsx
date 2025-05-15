@@ -99,11 +99,11 @@ export default function Business() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
+      <section id="features" className="py-20 bg-[#fdf2e3]">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-black">Business without Limits</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div id="feature-card-1" className="p-6 rounded-xl shadow-lg">
+            <div id="feature-card-1" className="p-6 bg-white rounded-xl shadow-lg">
               <motion.div 
                 className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4"
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -116,7 +116,7 @@ export default function Business() {
               <h3 className="text-xl font-bold mb-3 text-black">Unlimited Users</h3>
               <p className="text-gray-600">Scale effortlessly with no restrictions on team size, allowing everyone in your organization to collaborate securely in one unified space.</p>
             </div>
-            <div id="feature-card-2" className="p-6 rounded-xl shadow-lg">
+            <div id="feature-card-2" className="p-6 bg-white rounded-xl shadow-lg">
               <motion.div 
                 className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4"
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -129,7 +129,7 @@ export default function Business() {
               <h3 className="text-xl font-bold mb-3 text-black">Unlimited Channels</h3>
               <p className="text-gray-600">Organize discussions, projects, or departments with as many dedicated channels as needed, ensuring clarity and focus for every workflow.</p>
             </div>
-            <div id="feature-card-3" className="p-6 rounded-xl shadow-lg">
+            <div id="feature-card-3" className="p-6 bg-white rounded-xl shadow-lg">
               <motion.div 
                 className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4"
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -147,7 +147,7 @@ export default function Business() {
       </section>
 
       {/* Security Section */}
-      <section id="security" className="py-20 bg-gray-50">
+      <section id="security" className="py-20 bg-[#fdf2e3]">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2">
@@ -212,7 +212,7 @@ export default function Business() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-white">
+      <section id="pricing" className="py-20 bg-[#fdf2e3]">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-black">Choose Your Plan</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">

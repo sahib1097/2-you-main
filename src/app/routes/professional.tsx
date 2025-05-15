@@ -65,7 +65,7 @@ export default function Professional() {
       <Header variant="white" />
 
       {/* Hero Section */}
-      <section className="bg-white min-h-screen pt-24 pb-12 flex items-center">
+      <section className="bg-[#fdf2e3] min-h-screen pt-24 pb-12 flex items-center">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 text-black text-center md:text-left mt-10 md:mt-0">
