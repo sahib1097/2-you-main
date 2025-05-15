@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Shield, Lock, Unlock } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useSecurityContext } from '../../contexts/SecurityContext';
 import SecurityStat from '../common/SecurityStat';
 
@@ -13,46 +14,56 @@ interface HexagonProps {
   setActiveIndex: (index: number | null) => void;
 }
 
-const Hexagon: React.FC<HexagonProps> = ({ index, stat, activeIndex, setActiveIndex }) => {
+const Hexagon: React.FC<HexagonProps> = ({
+  index,
+  stat,
+  activeIndex,
+  setActiveIndex
+}) => {
+  const navigate = useNavigate();
   const { fortressMode, incrementLockClicks } = useSecurityContext();
   const isActive = activeIndex === index;
 
-  const handleClick = () => {
-    if (isActive) {
-      setActiveIndex(null);
-    } else {
-      setActiveIndex(index);
-    }
-    
+  // Hover to show details
+  const handleMouseEnter = () => setActiveIndex(index);
+  const handleMouseLeave = () => setActiveIndex(null);
+
+  // Click for analytics + navigate
+  const handleClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
     if (index === 0) {
       incrementLockClicks();
     }
+    navigate('/#features');
   };
 
   return (
-    <div 
-      className={`hexagon relative flex items-center justify-center cursor-pointer
+    <div
+      className={`
+        hexagon relative flex items-center justify-center cursor-pointer
         ${isActive ? 'active' : ''}
         ${fortressMode ? 'fortress-mode' : ''}
       `}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       onClick={handleClick}
     >
       <div className="z-10 text-center">
         {isActive ? (
-          <Unlock 
-            size={24} 
-            className={`mx-auto ${fortressMode ? 'text-[#FF3B30]' : 'text-[#FF3B30]'} ${isActive ? 'pulse-animation' : ''}`} 
+          <Unlock
+            size={24}
+            className="mx-auto text-[#FF3B30] pulse-animation"
           />
         ) : (
-          <Lock 
-            size={24} 
-            className={`mx-auto ${fortressMode ? 'text-[#FF3B30]' : 'text-[#FF3B30]'}`} 
+          <Lock
+            size={24}
+            className="mx-auto text-[#FF3B30]"
           />
         )}
       </div>
-      
+
       {isActive && (
-        <SecurityStat 
+        <SecurityStat
           title={stat.title}
           value={stat.value}
           className="absolute -bottom-32 left-1/2 transform -translate-x-1/2 z-20 w-48"
@@ -65,14 +76,14 @@ const Hexagon: React.FC<HexagonProps> = ({ index, stat, activeIndex, setActiveIn
 const HeroSection: React.FC = () => {
   const { fortressMode } = useSecurityContext();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  
+
   const securityStats = [
-    { title: "Encryption", value: "100% end-to-end encrypted at rest + in transit" },
+    { title: "Encryption",     value: "100% end-to-end encrypted at rest + in transit" },
     { title: "Zero Knowledge", value: "Your data is hidden even from us" },
-    { title: "Local Keys", value: "Encryption keys never leave your device" },
-    { title: "No Backdoors", value: "Not even we can access your data" },
+    { title: "Local Keys",     value: "Encryption keys never leave your device" },
+    { title: "No Backdoors",   value: "Not even we can access your data" },
     { title: "Audit Verified", value: "Regular third-party security audits" },
-    { title: "Zero Trust", value: "Every request is authenticated & verified" },
+    { title: "Zero Trust",     value: "Every request is authenticated & verified" },
   ];
 
   return (
@@ -87,16 +98,20 @@ const HeroSection: React.FC = () => {
       </div>
 
       <div className="relative">
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8 max-w-4xl mx-auto relative pb-32">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8 max-w-4xl mx-auto relative pb-10">
           {securityStats.map((stat, index) => (
-            <Hexagon 
-              key={index} 
-              index={index} 
-              stat={stat} 
+            <Hexagon
+              key={index}
+              index={index}
+              stat={stat}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
             />
           ))}
+        </div>
+
+        <div className="flex items-center justify-center">
+          <p className="text-gray-500">Click the locks for more.</p>
         </div>
 
         <div className="absolute inset-0 flex items-center justify-center -z-10 opacity-10">

@@ -37,10 +37,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 text-white text-center md:text-left mt-10 md:mt-0">
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-3">
-                The ultimate (secure) communication Platform
+                The ultimate (secure) Chat Platform
               </h1>
               <p className="text-base sm:text-xl mb-8">
-                Effortlessly connect with friends and family. Share moments, chat instantly, and stay closer than ever with intuitive features designed for your personal life.
+                Connect with friends and family, share moments, chat instantly, and stay closer than ever with fresh features designed for your security and privacy in your personal life. 
               </p>
               <div className="flex space-x-4 justify-center md:justify-start">
                 <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer">
@@ -78,7 +78,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
+      <section id="features" className="bg-white">
         <FeatureSection/>
       </section>
 

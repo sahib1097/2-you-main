@@ -41,12 +41,12 @@ const Footer = () => {
               <li className="text-gray-400 hover:text-white cursor-pointer">
                 <Link to="/security" className="text-gray-400 hover:text-white cursor-pointer">Security</Link>
               </li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Pricing</li>
+              {/* <li className="text-gray-400 hover:text-white cursor-pointer">Pricing</li> */}
             </ul>
           </div>
 
           {/* Company */}
-          <div>
+          {/* <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-3 text-sm">
               <li className="text-gray-400 hover:text-white cursor-pointer">About</li>
@@ -58,7 +58,7 @@ const Footer = () => {
               </li>
               
             </ul>
-          </div>
+          </div> */}
 
           {/* Support */}
           <div>
@@ -148,7 +148,7 @@ const Footer = () => {
               <div className="hidden md:block md:w-1/3" />
 
               {/* Company */}
-              <div className="md:w-1/3 text-left md:text-right">
+              <div className="md:w-1/3 text-left">
                 <h4 className="text-white font-semibold mb-3">Company</h4>
                 <ul className="space-y-3">
                   <li>

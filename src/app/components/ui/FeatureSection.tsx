@@ -1,5 +1,6 @@
 import React from "react";
 import { Shield, Ghost, MessageSquare, Lock, Users, FileText, Instagram, Text } from "lucide-react";
+import exclusiveImg from "../../Assets/exclusive-features.png";
 import FeatureCard from "./FeatureCard";
 import chatEncryption from "../../Assets/chatEncryption.webp"
 import ghostChat from "../../Assets/ghostChat.webp"
@@ -111,12 +112,20 @@ const features = [
 
 const FeatureSection = () => {
   return (
-    <section className="py-20">
+    <section className="pb-20 bg-[#fdf2e3]">
       <div className="container max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-[#682221]">
-          Exclusive Features
-        </h2>
-        <div className="space-y-28 md:space-y-40">
+        <img
+          src={exclusiveImg}
+          alt="Exclusive Features"
+          className="
+            block mx-auto 
+            mb-8 sm:mb-12 md:mb-16 
+            h-[250px] sm:h-[350px] md:h-[700px] 
+            object-contain
+          "
+        />
+
+        <div className="space-y-16 md:space-y-40">
           {features.map((feature, index) => (
             <FeatureCard
               key={feature.id}
