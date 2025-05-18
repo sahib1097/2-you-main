@@ -14,6 +14,9 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mobilephone from "../Assets/2You Mobile.png";
 import mobilemsg from "../Assets/2You Messages.png";
+import businessLogin from "../Assets/businessLogin.png";
+import businessHeroSection from "../Assets/businessHeroSection.png";
+import businessExample from "../Assets/businessExample.png";
 import appstoresvg from "../Assets/appstore.svg";
 import googleplaysvg from "../Assets/googleplay.svg";
 import Footer from "../components/Footer";
@@ -88,8 +91,8 @@ export default function Business() {
             >
               <div className="relative">
                 <img
-                  className="w-[200px] mx-auto"
-                  src={mobilephone}
+                  className="w-[350px] mx-auto"
+                  src={businessLogin}
                   alt="App Mockup"
                 />
               </div>
@@ -100,8 +103,20 @@ export default function Business() {
 
       {/* Features Section */}
       <section id="features" className="py-20 bg-[#fdf2e3]">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-black">Business without Limits</h2>
+        {/* <div className="container mx-auto px-6"> */}
+        <div className="container max-w-7xl mx-auto px-4">
+      <img
+         src={businessHeroSection}
+         alt="Exclusive Features"
+         className="
+           block mx-auto
+           w-[90%] md:w-auto
+           mb-8 sm:mb-12 md:mb-16
+           h-[250px] sm:h-[350px] md:h-[700px]
+           object-contain
+         "
+       />
+          {/* <h2 className="text-4xl font-bold text-center mb-16 text-black">Business without Limits</h2> */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div id="feature-card-1" className="p-6 bg-white rounded-xl shadow-lg">
               <motion.div 
@@ -205,7 +220,11 @@ export default function Business() {
               </div>
             </div>
             <div className="md:w-1/2 mt-12 md:mt-0">
-              <img className="rounded-xl mx-5" src={mobilemsg} alt="encrypted chat" />
+              <img
+                className="rounded-xl mx-5 h-180 object-cover"
+                src={businessExample}
+                alt="encrypted chat"
+              />
             </div>
           </div>
         </div>
