@@ -7,7 +7,7 @@ import {
 import { Link } from "react-router";
 {/*import ToYou from "../Assets/2YOU.png"*/}
 import subprime from "../Assets/subprime platforms White transparent.png"
-import deep from "../Assets/DeepIDV.png"
+import deep from "../Assets/DeepIDV.webp"
 import nextquest from "../Assets/Next Quest.png"
 
 
@@ -46,21 +46,6 @@ const Footer = () => {
               {/* <li className="text-gray-400 hover:text-white cursor-pointer">Pricing</li> */}
             </ul>
           </div>
-
-          {/* Company */}
-          {/* <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="text-gray-400 hover:text-white cursor-pointer">About</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">Contact</li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">
-                <a href="https://subprimeplatforms.com/careers" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-                    Careers
-                </a>
-              </li>
-              
-            </ul>
-          </div> */}
 
           {/* Support */}
           <div>

@@ -22,6 +22,7 @@ import googleplaysvg from "../Assets/googleplay.svg";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
+import Pricing from '../components/pricing/pricing';
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -233,10 +234,11 @@ export default function Business() {
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-[#fdf2e3]">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-black">Choose Your Plan</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-            {/* Pricing cards */}
-          </div>
+          <h2 className="text-4xl font-bold text-center mb-16 text-black">
+            Choose Your Plan
+          </h2>
+          {/* directly drop in your full‑width Pricing component */}
+          <Pricing />
         </div>
       </section>
 
