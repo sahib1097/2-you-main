@@ -167,8 +167,18 @@ const Footer = () => {
       <div className="border-t border-gray-800 text-sm text-gray-400 py-4 px-8 flex flex-col md:flex-row justify-between items-center">
         <p>&copy; {new Date().getFullYear()} 2YOU. All rights reserved.</p>
         <div className="flex space-x-6 mt-2 md:mt-0">
-          <span className="hover:text-white cursor-pointer">Privacy Policy</span>
-          <span className="hover:text-white cursor-pointer">Terms of Service</span>
+          <Link
+            to="/privacy-policy"
+            className="hover:text-white cursor-pointer"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            to="/terms-of-service"
+            className="hover:text-white cursor-pointer"
+          >
+            Terms of Service
+          </Link>
         </div>
       </div>
     </footer>
