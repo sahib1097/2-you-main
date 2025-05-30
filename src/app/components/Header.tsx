@@ -67,8 +67,8 @@ const Header: React.FC<HeaderProps> = ({ variant = 'red' }) => {
           <div className="md:hidden mt-4 flex flex-col space-y-4">
             <Link to="/" className={navLinkClass}>Personal</Link>
             <Link to="/business" className={navLinkClass}>Business</Link>
-            <Link to="/enterprise" className={navLinkClass}>Enterprise</Link>
-            <Link to="/professional" className={navLinkClass}>Professional</Link>
+            {/* <Link to="/enterprise" className={navLinkClass}>Enterprise</Link>
+            <Link to="/professional" className={navLinkClass}>Professional</Link> */}
 
             <button className={`font-semibold ${isRed ? 'text-white hover:text-red-200' : 'text-red-600 hover:text-red-200'}`}>
               Log In
